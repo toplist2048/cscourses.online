@@ -5,7 +5,7 @@ author: admin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://cscourses.online/uncategorized/python-functions-and-generators/
+  https://cscourses.online/python/python-functions-and-generators/
 published: true
 post_date: 2019-03-13 04:10:00
 ---
