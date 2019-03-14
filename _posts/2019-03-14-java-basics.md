@@ -1,13 +1,11 @@
 ---
 ID: 763
-post_title: >
-  Java Data Types, Operators and
-  Statements
+post_title: Java Basics
 author: admin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://cscourses.online/java/java-data-types-operators-and-statements/
+  https://cscourses.online/java/java-basics/
 published: true
 post_date: 2019-03-14 18:30:46
 ---
