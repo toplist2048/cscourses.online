@@ -88,7 +88,7 @@ class Cat{ }
     <p>Sometimes you want to use Date from two different packages. When this
       happens, you can pick one to use in the import and use the other’s fully
       qualified class name.</p>
-    <h4>Java Interface Definition</h4>
+    <h4>Java Interfaces</h4>
     <p>An interface specifies a contract for the classes to implement. The
       methods in an interface can define a default implementation. Interfaces
       can also define static methods.</p>
