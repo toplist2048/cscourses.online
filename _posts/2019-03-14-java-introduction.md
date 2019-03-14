@@ -5,7 +5,7 @@ author: admin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://cscourses.online/java/java-basics/
+  https://cscourses.online/java/java-introduction/
 published: true
 post_date: 2019-03-14 17:00:38
 ---
