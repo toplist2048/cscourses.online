@@ -1,6 +1,6 @@
 ---
 ID: 759
-post_title: Java Basics
+post_title: Java Introduction
 author: admin
 post_excerpt: ""
 layout: post
