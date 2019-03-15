@@ -15,6 +15,8 @@ post_date: 2019-03-14 18:30:46
   </head>
   <body>
     <h3>Java Data Types</h3>
+    <p>Java has two kinds of data types: Java primitiives and Java objects.
+      Everything in Java is an Object except primitives.</p>
     <h4>Java Primitives</h4>
     <p>Java primitive types are built-in types.</p>
     <table>
@@ -33,7 +35,12 @@ post_date: 2019-03-14 18:30:46
         </tr>
         <tr>
           <td>byte</td>
-          <td style="height: 19px;"> 8-bit integral value</td>
+          <td> 8-bit integral value</td>
+          <td> 123</td>
+        </tr>
+        <tr>
+          <td>short</td>
+          <td> 16-bit integral value</td>
           <td> 123</td>
         </tr>
         <tr>
@@ -44,7 +51,7 @@ post_date: 2019-03-14 18:30:46
         <tr>
           <td>long</td>
           <td> 64-bit integral value </td>
-          <td style="height: 19px;">123L</td>
+          <td>123L</td>
         </tr>
         <tr>
           <td> float</td>
@@ -83,17 +90,169 @@ post_date: 2019-03-14 18:30:46
       <li>binary (digits 0–1), which uses the number 0 followed by b or B as a
         prefix—for example, 0b10</li>
     </ul>
-    <h4>Java References</h4>
-    <p>Java reference is a pointer to a object located in memory. Reference
-      types can be assigned null , which means they do not currently refer to an
-      object.</p>
-    <pre>String str = "Hello, World!";</pre>
     <h4>Java Identifiers</h4>
     <ul>
       <li>The name must begin with a letter or the symbol $ or _ </li>
       <li>Subsequent characters may also be numbers.</li>
       <li>You cannot use the same name as a Java reserved word.</li>
-    </ul>    
+    </ul>
+    <h4>Java Strings, StringBuilders, and StringBuffer</h4>
+    <p>In Java, there are tow methods to create a String.</p>
+    <pre>String name = "Java";
+String name = new String("Java"); </pre>
+    <p>Once a String object is created, it is not allowed to change. The string
+      pool is the place where the JVM collects all these strings.</p>
+    <p>String contatenated using +,</p>
+    <pre>String Name = "Java" + "Script";    
+</pre>
+    <p>Important String methods,</p>
+    <ul>
+      <li>charAt() - Return the character at a index. Throw exception is out of
+        range.</li>
+      <li>contains() - Check if String contains some Stirng.</li>
+      <li>equals(), equalsIgnoreCase() - Check if two Strings equal. Never use
+        == to compare String objects, cuase == check reference equal.</li>
+      <li>indexOf() - Return the first index that matches the character. Return
+        -1 is no match.</li>
+      <li>length() - Return the String length.</li>
+      <li>replace() - Replace part of the String.</li>
+      <li>startsWith(), endsWith() - Check if String start / end with a some
+        String.</li>
+      <li>subString() - Return part of the String.</li>
+      <li>toLowerCase(), toUpperCase() - Return a lover case / upper case
+        version </li>
+      <li>trim() - Remove whitespaces from begining and end of the String.</li>
+    </ul>
+    <p>It is common to chain multiple methods on the same String.</p>
+    <pre>" Hello, World. ".trim().replace(".", "!").toLowerCase();
+</pre>
+    <p>String is immutable, so when there is lots of operations, use
+      StringBuilder, which is mutable.</p>
+    <pre>StringBuilder sb =  new StringBuilder("Java");</pre>
+    <p>In StringBuilder, size is the number of characters currently in the
+      sequence, and capacity is the number of characters the sequence can
+      currently hold.</p>
+    <p>Important StringBuilder methods include charAt(), indexOf(), length(),
+      and subString().</p>
+    <p>Since StringBuilder is mutable, it has append(), insert(), delete(),
+      deleteCharAt(), reverse(), toString().</p>
+    <p>The StringBuilder equals() only compare reference equal, since it is not
+      overwrited.</p>
+    <p>StringBuffer does the same thing as StringBuilder but more slowly because
+      it is thread safe.</p>
+    <h4>Java References</h4>
+    <p>Java reference is a pointer to a object located in memory. Reference
+      types can be assigned null , which means they do not currently refer to an
+      object.</p>
+    <pre>String str = "Hello, World!";</pre>
+    <h4>Java Wrapper Class</h4>
+    <table>
+      <thead>
+        <tr>
+          <td>Primitive Type</td>
+          <td>Wrapper Class</td>
+          <td>Constructing</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>boolean</td>
+          <td>Boolean</td>
+          <td>new Boolean(true)</td>
+        </tr>
+        <tr>
+          <td>byte</td>
+          <td>Byte</td>
+          <td>new Byte((byte) 1)</td>
+        </tr>
+        <tr>
+          <td>short</td>
+          <td>Short</td>
+          <td>new Short((short) 1)</td>
+        </tr>
+        <tr>
+          <td>int</td>
+          <td>Integer</td>
+          <td>new Integer(1)</td>
+        </tr>
+        <tr>
+          <td>long</td>
+          <td>Long</td>
+          <td>new Long(1L)</td>
+        </tr>
+        <tr>
+          <td> float</td>
+          <td>Float</td>
+          <td>new Float(1.0F)</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td>Double</td>
+          <td>new Double(1.0)</td>
+        </tr>
+        <tr>
+          <td>char</td>
+          <td>Character</td>
+          <td>new Character('1')</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>You can convert primitive value and wrapper class without cast. Java will
+      convert it for you. This is called autoboxing. </p>
+    <pre>Integer i = 1;
+int j = i;</pre>
+    <p>Converting from a String </p>
+    <table>
+      <thead>
+        <tr>
+          <td>Wrapper Class</td>
+          <td>Converting String to primitive</td>
+          <td>Constructing</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Boolean</td>
+          <td>Boolean.parseBoolean("true");</td>
+          <td>Boolean.valueOf("TRUE");</td>
+        </tr>
+        <tr>
+          <td>Byte</td>
+          <td>Byte.parseByte("1");</td>
+          <td>Byte.valueOf("1");</td>
+        </tr>
+        <tr>
+          <td>Short</td>
+          <td>Short.parseShort("1");</td>
+          <td>Short.valueOf("1");</td>
+        </tr>
+        <tr>
+          <td>Integer</td>
+          <td>Integer.parseInt("1");</td>
+          <td>Integer.valueOf("1");</td>
+        </tr>
+        <tr>
+          <td>Long</td>
+          <td>Long.parseLong("1");</td>
+          <td>Long.valueOf("1");</td>
+        </tr>
+        <tr>
+          <td>Float</td>
+          <td>Float.parseFloat("1");</td>
+          <td>Float.valueOf("1.1");</td>
+        </tr>
+        <tr>
+          <td>Double</td>
+          <td>Double.parseDouble("1");</td>
+          <td>Double.valueOf("1.1");</td>
+        </tr>
+        <tr>
+          <td>Character</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </table>
     <h3>Java Operators</h3>
     <p>A Java operator applies to a set of variables, values, or literals and
       returns a result. Unless overridden with parentheses, Java operators
@@ -179,6 +338,62 @@ post_date: 2019-03-14 18:30:46
     <p><code>a instanceof b</code> is True if the reference that a points to is
       an instance of a class, subclass, or class that implements a particular
       interface, as named in b</p>
+    <h3>Java Arrays</h3>
+    <p>An Java array is a piece of memory on the heap for a number of elements.</p>
+    <h4>Java Creating Arrays</h4>
+    <p>Ways to create arrays,</p>
+    <pre>int[] numbers = new int[3];
+int[] numbers = new int[] {11, 22, 33};
+int[] numbers = {42, 55, 99};</pre>
+    <p>The [] can before or after the name, and adding spaces is optional. This
+      means that all four of these statements do the exact same thing.</p>
+    <pre>int[] numbers;
+int [] numbers;
+int numbers[];
+int numbers [];</pre>
+    <p>Note when [] used in multiple declaration, the place of [] matters. In
+      below example, b is a int[], whild d is a int.</p>
+    <pre>int [] a, b;
+int c[], d;
+</pre>
+    <p>When array is created for objects, the array does not allocate space for
+      the objects. Instead, it allocates space for a reference to the objects.</p>
+    <p>Array can be casted.</p>
+    <pre>String[] s = {1, 2, 3}    
+Object[] o = s 
+String[] s2 = (String[]) o</pre>
+    <h4>Java Array Functions</h4>
+    <p>Some array functions defined in java.util.Arrays,</p>
+    <ul>
+      <li>Arrays.sort() - Sort an array.</li>
+      <li>Arrays.binarySearch() - Search an array.</li>
+    </ul>
+    <h4>Java Multidimensional Arrays</h4>
+    <pre>String [][] d2 = new String[3][2];</pre>
+    <h3>Java ArrayList</h3>
+    <p>An ArrayList is an ordered sequence that allows duplicates. ArrayList can
+      change size at runtime as needed.</p>
+    <pre>import java.util.ArrayList; // import ArrayList</pre>
+    <p>There are different ways to create an ArrayList. ArrayList support
+      generaic programming. If type is not specified, you can store any object
+      in it.</p>
+    <pre>ArrayList list1 = new ArrayList();
+ArrayList list2 = new ArrayList(10);
+ArrayList list3 = new ArrayList(list2);
+ArrayList&lt;String&gt; list4 = new ArrayList&lt;String&gt;();
+ArrayList&lt;String&gt; list5 = new ArrayList&lt;&gt;();
+</pre>
+    <p>ArrayList support below methods,</p>
+    <ul>
+      <li>add() - Insert a new value</li>
+      <li>remove() - Remove the first matching value</li>
+      <li>set() - Change one of the elements</li>
+      <li>isEmpty() - Check if empty</li>
+      <li>size() - Get size</li>
+      <li>clear() - Discard all elements.</li>
+      <li>contains() - Check if certain element is in.</li>
+      <li>equals() - Check two lists have same elements in same order</li>
+    </ul>
     <h3>Java Statements</h3>
     <b>Java if-else Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
