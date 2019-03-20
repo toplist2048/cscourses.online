@@ -14,6 +14,10 @@ post_date: 2019-03-13 17:27:14
   <head>
   </head>
   <body>
+<blockquote>
+    <p>Any app that can be written in JavaScript, will eventually be written in JavaScript.</p>
+</blockquote>
+<cite>– Jeff Atwood</cite>
     <h2>JavaScript Introduction</h2>
     <p>JavaScript and ECMAScript are two names of the same language. </p>
     <p>JavaScript is easy to learn but hard to master. JavaScript is
