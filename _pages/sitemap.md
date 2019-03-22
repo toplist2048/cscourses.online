@@ -23,6 +23,7 @@ post_date: 2019-02-12 18:00:22
  	<li><a href="/topics/cpp/">C++</a></li>
  	<li><a href="/topics/scala/">Scala</a></li>
  	<li><a href="/topics/kotlin/">Kotlin</a></li>
+ 	<li><a href="/topics/haskell/">Haskell</a></li>
 </ul>
 </li>
  	<li>Data
