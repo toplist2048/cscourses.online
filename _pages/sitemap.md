@@ -39,11 +39,16 @@ post_date: 2019-02-12 18:00:22
  	<li><a href="/topics/http/">HTTP</a>,  <a href="/topics/ajax/">AJAX</a>, <a href="/topics/restful/">RESTful</a></li>
  	<li><a href="/topics/spark/">Spark</a></li>
 </ul>
-</li>
- 	<li>Application
+</li><li>Application
 <ul>
  	<li><a href="/topics/wordpress/">WordPress</a></li>
 </ul>
 </li>
+ 	<li>Theory
+<ul>
+ 	<li><a href="/topics/theory-of-computation/">Theory of Computation</a></li>
+</ul>
+</li>
+
 </ul>
 </div>
