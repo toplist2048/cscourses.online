@@ -20,9 +20,11 @@ post_date: 2019-02-12 18:00:22
  	<li><a href="/topics/javascript/">JavaScript</a>, <a href="/topics/node-js/">Node.js</a>, <a href="/topics/react/">React</a></li>
  	<li><a href="/topics/php/">PHP</a></li>
  	<li><a href="/topics/c/">C</a></li>
+ 	<li><a href="/topics/java/">Java</a></li>
  	<li><a href="/topics/cpp/">C++</a></li>
  	<li><a href="/topics/scala/">Scala</a></li>
  	<li><a href="/topics/kotlin/">Kotlin</a></li>
+ 	<li><a href="/topics/erlang/">Erlang</a></li>
  	<li><a href="/topics/haskell/">Haskell</a></li>
 </ul>
 </li>
