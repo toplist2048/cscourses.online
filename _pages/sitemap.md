@@ -41,6 +41,7 @@ post_date: 2019-02-12 18:00:22
         <li><a href="/topics/docker/">Docker</a></li>
  	<li><a href="/topics/http/">HTTP</a>,  <a href="/topics/ajax/">AJAX</a>, <a href="/topics/restful/">RESTful</a></li>
  	<li><a href="/topics/hadoop/">Hadoop</a>, <a href="/topics/spark/">Spark</a></li>
+<li><a href="/topics/kafka/">Kafka</a></li>
 </ul>
 </li><li>Application
 <ul>
