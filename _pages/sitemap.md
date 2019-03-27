@@ -30,7 +30,7 @@ post_date: 2019-02-12 18:00:22
 </li>
  	<li>Data
 <ul>
- 	<li><a href="/topics/sqlite/">SQLite</a></li>
+ 	<li><a href="/topics/sql/">SQL</a>, <a href="/topics/sqlite/">SQLite</a></li>
  	<li><a href="/topics/mongodb/">MongoDB</a></li>
  	<li><a href="/topics/machine-learning/">Machine Learning</a>, <a href="/topics/tensorflow/">TensorFlow</a></li>
 </ul>
