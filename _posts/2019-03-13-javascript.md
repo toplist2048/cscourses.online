@@ -114,6 +114,17 @@ const b = 1;</pre>
       the code in that scope. This is sometimes useful because it offers the
       freedom to order code in a way that seems meaningful, without worrying
       about having to define all functions before they are used.</p>
+
+<p>An IIFE (Immediately Invoked Function Expression), also known as Self-Executing Anonymous Function, is a function that runs as soon as it is declared.<p>
+<pre lang="javascript">
+(function () {
+    statements
+})();
+</pre>
+<p> It has two parts. The first part is the anonymous function whose lexical scope enclosed within the Grouping Operator (). This prevents accessing internal variables as well as polluting the global scope.</p>
+
+<p>The second part creates the immediately executing function expression () so the function will be directly interpreted.</p>
+
     <h3>JavaScript Function Definition</h3>
     <p>A function definition is a regular binding where the value of the binding
       is a function.</p>
