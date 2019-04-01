@@ -26,6 +26,7 @@ post_date: 2019-02-12 18:00:22
  	<li><a href="/topics/kotlin/">Kotlin</a></li>
  	<li><a href="/topics/erlang/">Erlang</a></li>
  	<li><a href="/topics/haskell/">Haskell</a></li>
+ 	<li><a href="/topics/awk/">Awk</a></li>
 </ul>
 </li>
  	<li>Data
