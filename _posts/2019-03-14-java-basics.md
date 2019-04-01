@@ -15,79 +15,75 @@ post_date: 2019-03-14 18:30:46
   </head>
   <body>
     <h3>Java Data Types</h3>
-    <p>Java has two kinds of data types: Java primitiives and Java objects.
-      Everything in Java is an Object except primitives.</p>
+    <p>Java has two kinds of data types: Java primitives and Java objects. Everything in Java is an Object except primitives.</p>
     <h4>Java Primitives</h4>
     <p>Java primitive types are built-in types.</p>
     <table>
       <thead>
         <tr>
-          <td> Keyword </td>
-          <td> Type </td>
-          <td> Literal </td>
+          <td>Keyword</td>
+          <td>Type</td>
+          <td>Literal</td>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>boolean</td>
-          <td> true or false </td>
+          <td>true or false</td>
           <td>true</td>
         </tr>
         <tr>
           <td>byte</td>
-          <td> 8-bit integral value</td>
-          <td> 123</td>
+          <td>8-bit integral value</td>
+          <td>123</td>
         </tr>
         <tr>
           <td>short</td>
-          <td> 16-bit integral value</td>
-          <td> 123</td>
+          <td>16-bit integral value</td>
+          <td>123</td>
         </tr>
         <tr>
           <td>int</td>
-          <td> 32-bit integral value</td>
-          <td> 123</td>
+          <td>32-bit integral value</td>
+          <td>123</td>
         </tr>
         <tr>
           <td>long</td>
-          <td> 64-bit integral value </td>
+          <td>64-bit integral value </td>
           <td>123L</td>
         </tr>
         <tr>
-          <td> float</td>
-          <td> 32-bit floating-point value </td>
+          <td>float</td>
+          <td>32-bit floating-point value </td>
           <td>123.45F</td>
         </tr>
         <tr>
           <td>double</td>
-          <td> 64-bit floating-point value </td>
+          <td>64-bit floating-point value </td>
           <td>123.456</td>
         </tr>
         <tr>
           <td>char</td>
-          <td> 16-bit Unicode value </td>
+          <td>16-bit Unicode value </td>
           <td>'a'</td>
         </tr>
       </tbody>
     </table>
     <ul>
       <li>float and double are used for floating-point (decimal) values.</li>
-      <li>A float requires the letter f following the number so Java knows it is
-        a float.</li>
-      <li>byte, short, int, and long are used for numbers without decimal
-        points.</li>
-      <li>A long requires the letter l following the number so Java knows it is
-        a long.</li>
+      <li>A float requires the letter f following the number so Java knows it is a float.</li>
+      <li>byte, short, int, and long are used for numbers without decimal points.</li>
+      <li>A long requires the letter l following the number so Java knows it is a long.</li>
       <li>Each numeric type uses twice as many bits as the smaller similar type.
         For example, short uses twice as many bits as byte does.</li>
     </ul>
-    <p>Speical integer format</p>
+    <p>Special integer format</p>
     <ul>
-      <li>octal (digits 0–7), which uses the number 0 as a prefix—for example,
+      <li><b>octal:</b> (digits 0–7), which uses the number 0 as a prefix—for example,
         017</li>
-      <li>hexadecimal (digits 0–9 and letters A–F), which uses the number 0
+      <li><b>hexadecimal:</b> (digits 0–9 and letters A–F), which uses the number 0
         followed by x or X as a prefix—for example, 0xFF</li>
-      <li>binary (digits 0–1), which uses the number 0 followed by b or B as a
+      <li><b>binary:</b> (digits 0–1), which uses the number 0 followed by b or B as a
         prefix—for example, 0b10</li>
     </ul>
     <h4>Java Identifiers</h4>
