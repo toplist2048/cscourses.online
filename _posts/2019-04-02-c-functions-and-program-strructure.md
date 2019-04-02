@@ -51,11 +51,29 @@ variables provide private, permanent storage within a single function.</p>
 lines until an #endif or #elif or #else are included. The expression defined(name) in a #if is 1 if the name has been defined, and 0 otherwise.</p>
 
     <h2>C Pointers and Arrays</h2>
+    <p>A pointer is a variable that contains the address of a variable. Pointers and arrays are closely related.</p>
+
     <h3>C Pointers and Addresses</h3>
-    <p>The unary operator &amp; gives the address of an object</p>
+    <p>The unary operator &amp; gives the address of an object.</p>
     <p>The unary operator * is the indirection or dereferencing operator; when applied to a pointer, it accesses the object the pointer points to.</p>
+    <pre>int x = 1, y = 2, z[10];
+int *ip;  //ip is a pointer to int 
+ip = &amp;x; // ip now points to x 
+y = *ip; // y is now 1 
+*ip = 0; // x is now 0 
+ip = &amp;z[O]; // ip now points to z[O] </pre>
+
     <h3>C Pointers and Function Arguments</h3>
     <p>Since C passes arguments to functions by value, there is no direct way for the called function to alter a variable in the calling function. The right way is to pass pointers to the variable to be changed.</p>
+<pre>
+void swap(int *px, int *py) {
+  int temp;
+  temp = *px;
+  *px = *py;
+  *py = temp;
+}
+swap (&a,&b);
+</pre>
     <h3>C Pointers and Arrays</h3>
     <p>There is one difference between an array name and a pointer.</p>
     <h3>C Address Arithmetic</h3>
