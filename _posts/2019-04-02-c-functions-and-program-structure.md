@@ -47,7 +47,7 @@ post_date: 2019-04-02 12:49:54
 </pre>
 <p>The #if line evaluates a constant integer expression (which may not include sizeof, casts, or enum constants). If the expression is non-zero, subsequent lines until an #endif or #elif or #else are included. The expression defined(name) in a #if is 1 if the name has been defined, and 0 otherwise.</p>
 
-<h2>C Pointers and Arrays</h2>
+<h2 id="PaA">C Pointers and Arrays</h2>
 <p>A pointer is a variable that contains the address of a variable. Pointers and arrays are closely related.</p>
 
 <h3>C Pointers and Addresses</h3>
@@ -116,7 +116,7 @@ int *f(); // f: function returning pointer to int
 int (*pf)(); // pf: pointer to function returning int 
 </pre>
 
-<h2>C Structures</h2>
+<h2 id="S">C Structures</h2>
 <p>A structure is a collection of one or more variables, possibly of different types, grouped together under a single name for convenient handling.</p>
 <h3>C Basics of Structures</h3>
 <p>A struct declaration defines a type. </p>
