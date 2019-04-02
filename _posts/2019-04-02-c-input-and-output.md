@@ -80,3 +80,20 @@ void minprintf(char *fmt, ...) {
 <li>Ordinary characters (not %), which are expected to match the next non-white space character of the input stream.</li>
 <li>Conversion specifications, consisting of the character '" an optional assignment suppression character *, an optional number specifying a maximum field width, an optional h, 1, or L indicating the width of the target, and a conversion character.</li>
 </ul>
+<p>Basic Scanf Conversions</p>
+<table>
+<thead>
+<tr><td>Character</td><td>Input Data</td><td>Argument Type</td></tr>
+</thead>
+<tbody>
+<tr><td>d</td><td>decimal integer</td><td>int *.</td></tr>
+<tr><td>i</td><td>integer</td><td>int *. The integer may be in octal (leading 0) or hexadecimal (leading Ox or OX).</td></tr>
+<tr><td>o</td><td>octal integer (with or without leading zero)</td><td>int *.</td></tr>
+<tr><td>u</td><td>unsigned decimal integer</td><td>unsigned int *.</td></tr>
+<tr><td>x</td><td>hexadecimal integer (with or without leading Ox or OX)</td><td>int *.</td></tr>
+<tr><td>c</td><td>characters</td><td>char *. The next input characters (default 1) are placed at the indicated spot. The normal skip over white space is suppressed; to read the next non-white space character, use %1s.</td></tr>
+<tr><td>s</td><td>character string (not quoted)</td><td>char *, pointing to an array of characters large enough for the string and a terminating , \0' that will be added.</td></tr>
+<tr><td>e, f, q</td><td>floating-point number with optional sign, optional decimal point and optional exponent</td><td>float *.</td></tr>
+<tr><td>%</td><td>literal %</td><td>no assignment is made.</td></tr>
+</tbody>
+</table>
