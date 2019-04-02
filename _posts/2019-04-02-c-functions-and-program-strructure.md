@@ -15,6 +15,8 @@ post_date: 2019-04-02 12:49:54
     <pre>return-type function-name(argument declarations){
   declarations and statements
 }</pre>
+    <p>The returh statement is the mechanism for returning a value from the called function to its caller. Any expressioncan follow return:</p>
+    <pre>return expression;</pre> 
     <h3>C External Variables</h3>
     <p>External variables are defined outside of any function, and are thus available to many functions.</p>
     <h3>C Scope Rules</h3>
@@ -25,14 +27,29 @@ post_date: 2019-04-02 12:49:54
     <p>The definitions and declarations shared among files are placed in a header file. To use it, use <code>#include "headfile.h"</code>.</p>
     <h3>C Static Variables</h3>
     <p>The static declaration, applied to an external variable or function, limits the scope of that object to the rest of the source file being compiled.</p>
+    <p>The static declaration can also be applied to internal variables. Internal static variables are local to a particular function just as automatic variables
+are, but unlike automatics, they remain in existence rather than coming and going each time the function is activated. This means that internal static
+variables provide private, permanent storage within a single function.</p>
+
     <h3>C Register Variables</h3>
     <p>A register declaration advises the compiler that the variable will be heavily used. The idea is that register variables are to be placed in machine registers, which may result in smaller and faster programs. But compilers are free to ignore the advice.</p>
+    <h3>C Block Structure</h3>
+    <p>Variables declared in block structure hide any identically named variables in outer blocks, and remain in existence until the matching right brace. As a matter of style, it's best to avoid variable names that conceal names in an outer scope; the potential for confusion and error is too great.</p>
+
     <h3>C Initialization</h3>
     <p>External and static variables are guaranteed to be initialized to zero; automatic and register variables have undefined initial values.</p>
+
     <h3>C Recursion</h3>
     <p>C functions may be used recursively; that is, a function may call itself either directly or indirectly.</p>
     <h3>C Preprocessor</h3>
     <p>The two most frequently used preprocessor features are #include, to include the contents of a file during compilation, and #define, to replace a token by an arbitrary sequence of characters.</p>
+<pre>
+#include «filename»
+#define name replacement text
+</pre>
+<p>The #if line evaluates a constant integer expression (which may not include sizeof, casts, or enum constants). If the expression is non-zero, subsequent
+lines until an #endif or #elif or #else are included. The expression defined(name) in a #if is 1 if the name has been defined, and 0 otherwise.</p>
+
     <h2>C Pointers and Arrays</h2>
     <h3>C Pointers and Addresses</h3>
     <p>The unary operator &amp; gives the address of an object</p>
