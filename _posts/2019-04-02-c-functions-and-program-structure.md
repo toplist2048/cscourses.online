@@ -1,6 +1,6 @@
 ---
 ID: 870
-post_title: C Functions and Program Strructure
+post_title: C Functions and Program Structure
 author: admin
 post_excerpt: ""
 layout: post
