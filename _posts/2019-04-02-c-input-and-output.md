@@ -92,8 +92,78 @@ void minprintf(char *fmt, ...) {
 <tr><td>u</td><td>unsigned decimal integer</td><td>unsigned int *.</td></tr>
 <tr><td>x</td><td>hexadecimal integer (with or without leading Ox or OX)</td><td>int *.</td></tr>
 <tr><td>c</td><td>characters</td><td>char *. The next input characters (default 1) are placed at the indicated spot. The normal skip over white space is suppressed; to read the next non-white space character, use %1s.</td></tr>
-<tr><td>s</td><td>character string (not quoted)</td><td>char *, pointing to an array of characters large enough for the string and a terminating , \0' that will be added.</td></tr>
+<tr><td>s</td><td>character string (not quoted)</td><td>char *, pointing to an array of characters large enough for the string and a terminating , '\0' that will be added.</td></tr>
 <tr><td>e, f, q</td><td>floating-point number with optional sign, optional decimal point and optional exponent</td><td>float *.</td></tr>
 <tr><td>%</td><td>literal %</td><td>no assignment is made.</td></tr>
 </tbody>
 </table>
+<pre>
+double v;
+scanf("%lf", &v);
+</pre>
+<h3>C File Access</h3>
+<p>File has to be opened by the library function fopen. fopen takes an external name like x.c or y.c, does some housekeeping and negotiation with the operating system (details of which needn't concern us), and returns a pointer to be used in subsequent reads or writes of the file.</p>
+<h3>C Error Handllng - Stderr and Exit</h3>
+<p>Output written on stderr normally appears on the screen even if the standard output is redirected.</p>
+
+<h3>C Line Input and Output</h3>
+<pre>
+char *fgets(char *line, int maxline, FILE *fp)
+int fputs(char *line, FILE *fp)
+</pre>
+
+<h3>C Miscellaneous Functions</h3>
+<b>C String Operations</b>
+<ul>
+<li>strcat(s,t) - concatenate t to end of s</li>
+<li>strncat(s,t,n) - concatenate n characters of t to end of s</li>
+<li>strcmp(s,t) - return negative, zero, or positive for s < t,s =::= t,or s > t</li>
+<li>strncmp(s,t,n) - same as strcmp but only in first n characters</li>
+<li>strcpy(s,t) - copy t to s</li>
+<li>strncpy(s,t,n) - copy at most n characters of t to s</li>
+<li>strlen(s) - return length of</li>
+<li>st.bhr(s,c) - return pointer to first c in s, or NULL if not present</li>
+<li>strrchr(s,c) - return pointer to last c in s, or NULL if not present</li>
+</ul>
+
+<b>C Character Class Testing and Conversion</b>
+<ul>
+<li>isalpha(c) - non-zero if c is alphabetic, 0 if not</li>
+<li>isupper(c) - non-zero if c is upper case, 0 if not</li>
+<li>islower(c) - non-zero if c is lower case, 0 if not</li>
+<li>isdigit(c) - non-zero if c is digit, 0 if not</li>
+<li>isalnum(c) - non-zero if isalpha(c)or isdigit(c),0 if not</li>
+<li>isspace(c) - non-zero if c is blank, tab, newline, return, formfeed, vertical tab</li>
+<li>toupper(c) - return c converted to upper case</li>
+<li>tolower(c) - return c converted to lower case</li>
+</ul>
+
+<h3>C Ungetc</h3>
+<p><code>int ungetc(int c, FILE *fp)</code> pushes the character c back onto file fp, and returns either c, or EOF for an error.</p>
+
+<h3>C Command Execution</h3>
+<p>The function <code>system(char *s)</code> executes the command contained in the character string s, then resumes execution of the current program</p>
+
+<h3>C Storage Management</h3>
+<p>The functions malloc and calloc obtain blocks of memory dynamically</p>
+<pre>
+void *malloc(size_t n)
+void *calloc(size_t n, size_t size)
+</pre>
+
+<h3>C Mathematical Functions</h3>
+<ul>
+<li>sin(x) - sine of x, x in radians</li>
+<li>cos(x) - cosine of x, x in radians</li>
+<li>atan2(y,x) - arctangent of y Ix, in radians</li>
+<li>exp(x) - exponential function e<sup>x</sup></li>
+<li>log(x) - natural (base e) logarithm of x (x> 0)</li>
+<li>log10(x) - common (base 10) logarithm of x (x> 0)</li>
+<li>pow(x,y) - x<sup>y</sup></li>
+<li>sqrt(x) - square root of x (x>=O)</li>
+<li>fabs(x) - absolute value of x</li>
+</ul>
+
+<h3>C Random Number Generation</h3>
+<p>The function rand() computes a sequence of pseudo-random integers in the range zero to RAND_MAX.</p>
+<p>The function srand(unsigned) sets the seed for rand.</p>
