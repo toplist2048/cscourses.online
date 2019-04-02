@@ -167,3 +167,6 @@ void *calloc(size_t n, size_t size)
 <h3>C Random Number Generation</h3>
 <p>The function rand() computes a sequence of pseudo-random integers in the range zero to RAND_MAX.</p>
 <p>The function srand(unsigned) sets the seed for rand.</p>
+
+<h2>C The UNIX System Interface</h2>
+<p>Forget about UNIx; Take a look at <a href="https://cscourses.online/topics/Linux/">Linux</a>!</p>
