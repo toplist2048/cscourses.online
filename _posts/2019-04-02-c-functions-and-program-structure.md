@@ -5,7 +5,7 @@ author: admin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://cscourses.online/c/c-functions-and-program-strructure/
+  https://cscourses.online/c/c-functions-and-program-structure/
 published: true
 post_date: 2019-04-02 12:49:54
 ---
