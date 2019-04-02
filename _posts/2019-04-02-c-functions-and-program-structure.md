@@ -75,11 +75,54 @@ void swap(int *px, int *py) {
 swap (&a,&b);
 </pre>
     <h3>C Pointers and Arrays</h3>
-    <p>There is one difference between an array name and a pointer.</p>
+    <p>In evaluating a[i], C converts it to *(a+i) immediately; the two forms are equivalent. Applying the operator & to both parts of this equivalence, it follows that &a[i] arid a+i are also identical: a+i is the address of the i-th element beyond a. As the other side of this coin, if pa is a pointer, expressions may use it with a subscript; pa[i] is identical to
+*(pa+i). In short, an array-and-index expression is equivalent to one written as a pointer and offset.</p>
+
     <h3>C Address Arithmetic</h3>
     <p>Pointer arithmetic is consistent: if we are dealing with floats, and if p were a pointer to float, p++ would advance to the next float.</p>
+    
+    <h3>C Character Pointers and Functions</h3>
+     <p>There is an important difference between these definitions,</p>
+<pre>char amessage[] = "now is the time"; // an array 
+char *pmessage = "now is the time"; // a pointer
+<p>amessaqe is an array, just big enough to hold the sequence of characters and '\0' that initializes it. Individual characters within the array may be changed but amessaqe will always refer to the same storage. On the other hand, pmessaqe is a pointer, initialized to point to a string constant; the pointer may subsequently be modified to point elsewhere, but the result is undefined if you try to modify the string contents.</p>
+
+    <h3>C Pointer Arrays; Pointers to Pointers</h3>
+<pre>char *lineptr[MAXLINES]; // pointers to text lines 
+</pre>
+
+    <h3>C Multi-dimensional Arrays</h3>
+    <p>In C, a two-dimensional array is really a one-dimensional array, each of whose elements is an array. </p>
+<pre>daytab[i][j]; // [row][col] </pre>
+
+    <h3>C Initialization of Pointer Arrays</h3>
+<pre>char *name[] = {
+"Illegal month",
+"January", "February", "March",
+"April", "May", "June",
+"July", "August", "September",
+"October", "November", "December" };</pre>
+
+    <h3>C Pointers vs. Multi-dimensional Arrays</h3>
+<p>The important advantage of the pointer array is that the rows of the array may be of different lengths. </p> 
+
+   <h3>C Command-line Arguments</h3>
+<p>In environments that support C, there is a way to pass command-line arguments or parameters to a program when it begins executing. When main is
+called, it is called with two arguments. The first (conventionally called argc, for argument count) is the number of command-line arguments the program
+was invoked with; the second (argv, for argument vector) is a pointer to an array of character strings that contain the arguments, one per string.</p>
+
     <h3>C Pointers to Functions</h3>
     <p>In C, a function itself is not a variable, but it is possible to define pointers to functions, which can be assigned, placed in arrays, passed to functions, returned by functions, and so on.</p>
+<pre>
+void qsort(void *v[], int left, int right, int (*comp)(void *, void *));
+</pre>
+ <h3>C Complicated Declarations</h3>
+<pre>
+int *f(); // f: function returning pointer to int 
+int (*pf)(); // pf: pointer to function returning int 
+</pre>
+
+
     <h2>C Structures</h2>
     <h3>C Basics of Structures</h3>
     <p>A struct declaration defines a type. </p>
