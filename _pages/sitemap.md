@@ -28,15 +28,15 @@ post_date: 2019-02-12 18:00:22
             <li><a href="/topics/awk/">Awk</a></li>
          </ul>
       </li>
-      <li>
-         Data<ul>
+      <li>Data
+         <ul>
             <li><a href="/topics/sql/">SQL</a>, <a href="/topics/sqlite/">SQLite</a></li>
             <li><a href="/topics/mongodb/">MongoDB</a></li>
             <li><a href="/topics/machine-learning/">Machine Learning</a>, <a href="/topics/tensorflow/">TensorFlow</a></li>
          </ul>
       </li>
-      <li>
-         System<ul>
+      <li>System
+          <ul>
             <li><a href="/topics/linux/">Linux</a>, <a href="/topics/windows/">Windows</a>, <a href="/topics/android/">Android</a></li>
             <li><a href="/topics/docker/">Docker</a></li>
             <li><a href="/topics/http/">HTTP</a>,  <a href="/topics/ajax/">AJAX</a>, <a href="/topics/restful/">RESTful</a></li>
@@ -44,19 +44,19 @@ post_date: 2019-02-12 18:00:22
             <li><a href="/topics/kafka/">Kafka</a></li>
          </ul>
       </li>
-      <li>
-         Application<ul>
+      <li>Application
+          <ul>
             <li><a href="/topics/wordpress/">WordPress</a></li>
          </ul>
       </li>
-      <li>
-         Software Engineering<ul>
+      <li>Software Engineering
+         <ul>
             <li><a href="/topics/git/">Git</a></li>
          </ul>
       </li>
-     <li>
-        Theory<ul>
-         <li><a href="/topics/theory-of-computation/">Theory of Computation</a></li>
+     <li>Theory
+        <ul>
+           <li><a href="/topics/theory-of-computation/">Theory of Computation</a></li>
         </ul>
      </li>
    </ul>
