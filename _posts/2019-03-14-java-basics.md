@@ -394,8 +394,11 @@ ArrayList&lt;String&gt; list5 = new ArrayList&lt;&gt;();
     <b>Java if-else Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
 if(booleanExpression 1) {   // Branch if booleanExpression 1 is True
-  ;<br>} else if(booleanExpression 2) {   // Branch if booleanExpression 2 is True
-  ;<br>} else { //otherwise<br>  ;<br>}
+  ;
+} else if(booleanExpression 2) {   // Branch if booleanExpression 2 is True
+  ;
+} else { //otherwise;
+}
  </pre>
     <b>Java Ternary Operators</b>
     <pre>booleanExpression ? expression 1 : expression 2</pre>
