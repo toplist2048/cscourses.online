@@ -38,12 +38,12 @@ recover from. </p>
 <b>Java Types of exceptions</b>
 <table>
 <thead>
-<tr><td>Type<td></td>How to recognize<td></td>Okay for program to catch?<td></td>Is program required to handle or declare?</td></tr>
+<tr><td>Type</td><td>How to recognize</td><td>Okay for program to catch?</td><td>Is program required to handle or declare?</td></tr>
 </thead>
 <tbody>
-<tr><td>Runtime exception<td></td>Subclass of RuntimeException<td></td>Yes<td></td>No</td></tr>
-<tr><td>Checked exception<td></td>Subclass of Exception but not subclass of RuntimeException<td></td>Yes<td></td>Yes</td></tr>
-<tr><td>Error<td></td>Subclass of Error<td></td>No<td></td>No</td></tr>
+<tr><td>Runtime exception</td><td>Subclass of RuntimeException</td><td>Yes</td><td>No</td></tr>
+<tr><td>Checked exception</td><td>Subclass of Exception but not subclass of RuntimeException</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Error</td><td>Subclass of Error</td><td>No</td><td>No</td></tr>
 </tbody>
 </table>
 
