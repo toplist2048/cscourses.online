@@ -106,7 +106,7 @@ doesn’t allow variables to be overridden but instead hidden.
 Although Java allows you to hide a variable defined in a parent class with one defined in
 a child class, it is considered an extremely poor coding practice.</p>
 
-<h3>Java Abstract Classes<h3>
+<h3>Java Abstract Classes</h3>
 <b>Abstract Class Definition Rules:</b>
 <ul>
 <li>Abstract classes cannot be instantiated directly.</li>
@@ -131,7 +131,7 @@ the method in the subclass must be at least as accessible as the method in the p
 class.<li>
 </ul>
 
-<h3>Java Interfaces<h3>
+<h3>Java Interfaces</h3>
 <p>Although Java doesn’t allow multiple inheritance, it does allow classes to implement any
 number of interfaces. An interface is an abstract data type that defines a list of abstract
 public methods that any class implementing the interface must provide. An interface can
@@ -221,7 +221,7 @@ compile if marked as private or protected.</li>
 <li>To reference the static method, a reference to the name of the interface must be used.</li>
 </ul>
 
-<h3>Java Polymophism<h3>
+<h3>Java Polymophism</h3>
 <p>Java supports polymorphism, the property of an object to take on many different forms.</p>
 
 <b>Java Object vs. Reference</b>
