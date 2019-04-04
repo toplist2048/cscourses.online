@@ -121,14 +121,14 @@ for all of the inherited abstract methods.</li>
 
 <b>Abstract Method Definition Rules:</b>
 <ul>
-<li>Abstract methods may only be defined in abstract classes.<li>
-<li>Abstract methods may not be declared private or final.<li>
+<li>Abstract methods may only be defined in abstract classes.</li>
+<li>Abstract methods may not be declared private or final.</li>
 <li>Abstract methods must not provide a method body/implementation in the abstract
-class for which is it declared.<li>
+class for which is it declared.</li>
 <li>Implementing an abstract method in a subclass follows the same rules for overriding a
 method. For example, the name and signature must be the same, and the visibility of
 the method in the subclass must be at least as accessible as the method in the parent
-class.<li>
+class.</li>
 </ul>
 
 <h3>Java Interfaces</h3>
