@@ -11,7 +11,7 @@ post_date: 2019-04-04 17:14:17
 ---
 <h2>Java Classes</h2>
 
-<h3>Java Class Inheritance<h3>
+<h3>Java Class Inheritance</h3>
 <p>Java supports single inheritance, by which a class may inherit from only one direct parent class. 
 To truly understand single inheritance, it may helpful to contrast it with multiple inheritance,
 by which a class may have multiple direct parents.</p>
