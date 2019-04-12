@@ -11,10 +11,10 @@ post_date: 2019-04-12 16:41:08
 <h2> C++ Basics</h2>
 <p>In this part, we will cover basic components in C++ language.</p>
 
-<h3>C++ Basic Types, Operators, and Expressions</h3>
+<h3>C++ Types and Variables</h3>
 <p>Everything has a type. Types tell us what our data mean, and what operation can be performed on the data. Some types are built-in in the languages, called primitive types.</p>
 
-<h3>C++ Primitive Types</h3>
+<h4>C++ Primitive Types</h4>
 <p>Below are basic data types in C++:</p>
 <ul>
 <li>void, no value</li>
@@ -85,3 +85,113 @@ produce garbage values.</li>
 <li>Suffix f or F, means float</li>
 <li>Suffix l or L, means long double</li>
 </ul>
+
+<b>C++ Escape Sequence</b>
+<ul>
+<li>newline, \n </li>
+<li>horizontal tab, \t </li>
+<li>alert (bell), \a</li>
+<li>vertical tab, \v </li>
+<li>backspace, \b </li>
+<li>double quote, \"</li>
+<li>backslash, \\ </li>
+<li>question mark, \? </li>
+<li>single quote, \'</li>
+<li>carriage return, \r </li>
+<li>formfeed, \f</li>
+</ul>
+
+<h4>Variables</h4>
+<p>A variable definition consists of a type specifier, followed by a list of one or
+more variable names separated by commas, and ends with a semicolon.</p>
+<p>An variable can be initialized to a value when it is created. The
+values can be expressions.  Initialization is not assignment. Initialization happens 
+when a variable is created. Assignment replaces current value with a new one.</p>
+<p>Using curly braces for initialization is called list initialization. 
+When used with variables of built-in type, list initialization has one
+important property: The compiler will not let us list initialize variables of built-in type if
+the initializer might lead to the loss of information:</p>
+<pre>int a = 0;
+int b{0};</pre>
+<p>A declaration makes a name known to the program. A file that wants to
+use a name defined elsewhere includes a declaration for that name. A definition
+creates the associated entity.</p>
+<p>Identifiers in C++ can be composed of letters, digits, and the underscore character.
+The language imposes no limit on name length. Identifiers must begin with either a
+letter or an underscore. Identifiers are case-sensitive; upper- and lowercase letters are
+distinct.</p>
+<h4>C++ Compound Types</h4>
+<b>C++ References</b>
+<p>A reference defines an alternative name for an object. A reference type "refers to"
+another type. A reference is not an object. Instead, a reference is just another name for an
+already existing object.</p>
+<pre>int ival = 1024;
+int &refVal = ival;
+</pre>
+<b>C++ Pointers</b>
+<p>A pointer is a compound type that “points to” another type. Like references, pointers
+are used for indirect access to other objects. Unlike a reference, a pointer is an object
+in its own right. Pointers can be assigned and copied; a single pointer can point to
+several different objects over its lifetime. Unlike a reference, a pointer need not be
+initialized at the time it is defined. </p>
+<p>Pointers are often hard to understand. Uninitialized pointers are a common source of run-time errors.
+Debugging problems due to pointer errors bedevil even experienced programmers</p>
+<p>The value (i.e., the address) stored in a pointer can be in one of four states,</p>
+<ul>
+<li>It can point to an object.</li>
+<li>It can point to the location just immediately past the end of an object.</li>
+<li>It can be a null pointer, indicating that it is not bound to any object. 
+A null pointer does not point to any object. Code can check whether a pointer is null
+before attempting to use it.</li>
+<li>It can be invalid; values other than the preceding three are invalid.</li>
+</ul>
+<p>We may dereference only a valid pointer that points to an object.</p>
+<p>The type void* is a special pointer type that can hold the address of any object. Like
+any other pointer, a void* pointer holds an address, but the type of the object at
+that address is unknown.</p>
+
+<h4>C++ const Qualifier</h4>
+<p>We can make a variable unchangeable by defining the variable’s type as const</p>
+<p>By default, const variables are local to a file. </p>
+<p>A reference to const is a reference that refers to a const type.
+A reference to const cannot be used to change the object to which the reference is bound.
+A reference to const restricts only what we can do through that reference. 
+Binding a reference to const to an object says nothing about
+whether the underlying object itself is const. Because the underlying object might be
+nonconst, it might be changed by other means:</p>
+<p>A pointer to const may not be used to change the object to which the pointer points. 
+We may store the address of a const object only in a pointer to const.</p>
+<pre>
+const int a = 1;
+int *ptr = &a; // error: ptr is a plain pointer
+const int *cptr = &a; // ok: cptr may point to a int that is const
+*cptr = 2; // error: cannot assign to *cptr
+</pre>
+<p>A const pointer must be initialized, and once initialized, its value may
+not be changed. We indicate that the pointer is const by putting the const after the
+*. This placement indicates that it is the pointer, not the pointed-to type, that is
+const.</p>
+<p>A constant expression is an expression whose value cannot change and that can be
+evaluated at compile time. A literal is a constant expression. A const object that is
+initialized from a constant expression is also a constant expression.
+We can ask the compiler to verify that a variable is a
+constant expression by declaring the variable in a constexpr declaration. Variables
+declared as constexpr are implicitly const and must be initialized by constant
+expressions</p>
+
+<h4>C++ Types</h4>
+<p>A type alias is a name that is a synonym for another type. Type aliases let us
+simplify complicated type definitions, making those types easier to use.</p>
+<p>We can define a type alias in one of two ways. We use a typedef, or 
+we can use alias declaration. An alias declaration starts with the keyword 
+using followed by the alias name and an =.
+</p>
+<pre>
+typedef int aname;
+using aName = int;
+</pre>
+<p>we can let the compiler figure out the type for us by using the auto type specifier.</p>
+<pre>auto b = 1;</pre>
+<p>The decltype returns the type of its operand. The compiler analyzes the expression to determine its
+type but does not evaluate the expression.</p>
+<pre>decltype(f()) ret = x; // ret has whatever type f returns</pre>
