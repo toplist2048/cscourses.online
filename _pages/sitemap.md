@@ -18,6 +18,7 @@ post_date: 2019-02-12 18:00:22
             <li><a href="/topics/python/">Python</a>, <a href="/topics/requests/">Requests</a>, <a href="/topics/numpy/">Numpy</a>, <a href="/topics/flask/">Flask</a></li>
             <li><a href="/topics/javascript/">JavaScript</a>, <a href="/topics/node-js/">Node.js</a>, <a href="/topics/react/">React</a></li>
             <li><a href="/topics/php/">PHP</a></li>
+            <li><a href="/topics/ruby/">Ruby</a></li>
             <li><a href="/topics/c/">C</a></li>
             <li><a href="/topics/java/">Java</a></li>
             <li><a href="/topics/cpp/">C++</a></li>
