@@ -116,9 +116,7 @@ share the same state. Methods that merely use that state should be static as wel
 variable and you are done.</p>
 <p>A static member cannot call an instance member. This shouldn’t be a surprise since static doesn’t require any instances of the class to be around. A static method or instance method can call a static method because static methods don’t require an object to use. Only an instance method can call another instance method on the same class without using a reference variable, because instance methods do require an object. Similar logic applies for the instance and static variables.</p>
 
-<b>Static vs. instance calls</b>
-<table>
-<thead>
+<b>Static vs. instance calls</b><table><thead>
 <tr><td>Type</td><td>Calling</td><td>Legal?</td><td>How?</td></tr>
 </thead>
 <tbody>
