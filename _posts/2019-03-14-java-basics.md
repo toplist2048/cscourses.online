@@ -9,11 +9,7 @@ permalink: >
 published: true
 post_date: 2019-03-14 18:30:46
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
+
     <h3>Java Data Types</h3>
     <p>Java has two kinds of data types: Java primitives and Java objects. Everything in Java is an Object except primitives.</p>
     <h4>Java Primitives</h4>
@@ -466,5 +462,3 @@ for(initialization; booleanExpression; updateStatement) {
   continue optionalLabel;<br>  ; // Body code<br>}</pre>
     <p>Without a label parameter, the continue statement will continue the
       nearest inner loop it is in.</p>
-  </body>
-</html>
