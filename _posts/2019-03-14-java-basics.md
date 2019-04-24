@@ -206,7 +206,7 @@ int [] numbers;
 int numbers[];
 int numbers [];</pre>
     <p>Note when [] used in multiple declaration, the place of [] matters. In
-      below example, b is a int[], whild d is a int.</p>
+      below example, b is a int[], while d is a int.</p>
     <pre>int [] a, b;
 int c[], d;
 </pre>
@@ -216,20 +216,23 @@ int c[], d;
     <pre>String[] s = {1, 2, 3}    
 Object[] o = s 
 String[] s2 = (String[]) o</pre>
+
     <h4>Java Array Functions</h4>
     <p>Some array functions defined in java.util.Arrays,</p>
     <ul>
       <li>Arrays.sort() - Sort an array.</li>
       <li>Arrays.binarySearch() - Search an array.</li>
     </ul>
+
     <h4>Java Multidimensional Arrays</h4>
     <pre>String [][] d2 = new String[3][2];</pre>
+
     <h3>Java ArrayList</h3>
     <p>An ArrayList is an ordered sequence that allows duplicates. ArrayList can
       change size at runtime as needed.</p>
     <pre>import java.util.ArrayList; // import ArrayList</pre>
     <p>There are different ways to create an ArrayList. ArrayList support
-      generaic programming. If type is not specified, you can store any object
+      generic programming. If type is not specified, you can store any object
       in it.</p>
     <pre>ArrayList list1 = new ArrayList();
 ArrayList list2 = new ArrayList(10);
@@ -244,10 +247,11 @@ ArrayList&lt;String&gt; list5 = new ArrayList&lt;&gt;();
       <li>set() - Change one of the elements</li>
       <li>isEmpty() - Check if empty</li>
       <li>size() - Get size</li>
-      <li>clear() - Discard all elements.</li>
-      <li>contains() - Check if certain element is in.</li>
+      <li>clear() - Discard all element.</li>
+      <li>contains() - Check if certain element is in</li>
       <li>equals() - Check two lists have same elements in same order</li>
     </ul>
+
     <h3>Java Statements</h3>
     <b>Java if-else Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
@@ -269,27 +273,32 @@ if(booleanExpression 1) {   // Branch if booleanExpression 1 is True
     break;
   case constantExpression 2 :
     ;// Branch for case 2 ;
-    break; Optional break
+    break; 
   default:
     ;// Branch for default
 }</pre>
-    <p>A switch statement has a target variable that is not evaluated until
-      runtime. Data types of the target varialbe include the following: int and
+    <p>A switch statement has a target variable that is evaluated at
+      runtime. Data types of the target variable include the following: int and
       Integer, byte and Byte, short and Short, char and Character, int and
       Integer, String, and enum values.</p>
     <p>There is no requirement that the case or default statements be in a
       particular order.</p>
+
     <b>Java while Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
 while(booleanExpression) {
   ;// Body
 }    
-</pre> <b>Java do-while Statements</b>
+</pre> 
+
+    <b>Java do-while Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
 do {
   // Body
 } while (booleanExpression); //Semicolon (required)    
-</pre> <b>Java for Statements</b>
+</pre> 
+
+    <b>Java for Statements</b>
     <pre>// Curly braces required for block of multiple statements, optional for single statement
 for(initialization; booleanExpression; updateStatement) {
   ; // Body
@@ -297,30 +306,35 @@ for(initialization; booleanExpression; updateStatement) {
     <p>The steps is, </p>
     <ol>
       <li>Initialization statement executes</li>
-      <li>If booleanExpression is true continue, else exit loop</li>
+      <li>If booleanExpression is true, continue, else exit loop</li>
       <li>Body executes</li>
-      <li>Execute updateStatements</li>
-      <li>Return to Step 2</li>
+      <li>Executes updateStatements</li>
+      <li>Returns to Step 2</li>
     </ol>
     <b>Java for-each Statements</b>
     <pre>for(datatype instance : collection) {
   ;// Body
 }</pre>
     <p>The collection must be a Java array or an object whose class implements
-      java.lang.Iterable , which includes most of the Java Collections
+      java.lang.Iterable, which includes most of the Java Collections
       framework. The type of the instance must matches the type of a member of
       the collection.</p>
+
     <b>Java break Statements</b>
-    <pre>optionalLabel: while(booleanExpression) {
+<pre>optionalLabel: while(booleanExpression) {
   ; //  Body code
-  break optionalLabel;<br>  ; // Body code<br>}</pre>
+  break optionalLabel;
+  ; // Body code
+}</pre>
     <p>Here optionalLabel is a label. A label is an optional pointer to the head
       of a statement that allows the application flow to jump to it or to
-      break&nbsp; it. Without a label parameter, the break statement will
+      break it. Without a label parameter, the break statement will
       terminate the nearest inner loop it is in.</p>
     <b>Java Continue Statements</b>
     <pre>optionalLabel: while(booleanExpression) {
   ; //  Body code
-  continue optionalLabel;<br>  ; // Body code<br>}</pre>
+  continue optionalLabel;
+  ; // Body code
+}</pre>
     <p>Without a label parameter, the continue statement will continue the
       nearest inner loop it is in.</p>
