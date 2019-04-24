@@ -9,66 +9,30 @@ permalink: >
 published: true
 post_date: 2019-03-14 18:30:46
 ---
-
     <h3>Java Data Types</h3>
     <p>Java has two kinds of data types: Java primitives and Java objects. Everything in Java is an Object except primitives.</p>
+
     <h4>Java Primitives</h4>
     <p>Java primitive types are built-in types.</p>
     <table>
       <thead>
-        <tr>
-          <td>Keyword</td>
-          <td>Type</td>
-          <td>Literal</td>
-        </tr>
+        <tr><td>Keyword</td><td>Type</td><td>Literal</td></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>boolean</td>
-          <td>true or false</td>
-          <td>true</td>
-        </tr>
-        <tr>
-          <td>byte</td>
-          <td>8-bit integral value</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>short</td>
-          <td>16-bit integral value</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>int</td>
-          <td>32-bit integral value</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>long</td>
-          <td>64-bit integral value </td>
-          <td>123L</td>
-        </tr>
-        <tr>
-          <td>float</td>
-          <td>32-bit floating-point value </td>
-          <td>123.45F</td>
-        </tr>
-        <tr>
-          <td>double</td>
-          <td>64-bit floating-point value </td>
-          <td>123.456</td>
-        </tr>
-        <tr>
-          <td>char</td>
-          <td>16-bit Unicode value </td>
-          <td>'a'</td>
-        </tr>
+        <tr><td>boolean</td><td>true or false</td><td>true</td></tr>
+        <tr><td>byte</td><td>8-bit integral value</td><td>123</td>
+        </tr><tr><td>short</td><td>16-bit integral value</td><td>123</td></tr>
+        <tr><td>int</td><td>32-bit integral value</td><td>123</td></tr>
+        <tr><td>long</td><td>64-bit integral value</td><td>123L</td></tr>
+        <tr><td>float</td><td>32-bit floating-point value</td><td>123.45F</td></tr>
+        <tr><td>double</td><td>64-bit floating-point value</td><td>123.456</td></tr>
+        <tr><td>char</td><td>16-bit Unicode value</td><td>'a'</td></tr>
       </tbody>
     </table>
     <ul>
-      <li>float and double are used for floating-point (decimal) values.</li>
+      <li>The float and double are used for floating-point (decimal) values.</li>
       <li>A float requires the letter f following the number so Java knows it is a float.</li>
-      <li>byte, short, int, and long are used for numbers without decimal points.</li>
+      <li>The byte, short, int, and long are used for numbers without decimal points.</li>
       <li>A long requires the letter l following the number so Java knows it is a long.</li>
       <li>Each numeric type uses twice as many bits as the smaller similar type.
         For example, short uses twice as many bits as byte does.</li>
@@ -82,42 +46,46 @@ post_date: 2019-03-14 18:30:46
       <li><b>binary:</b> (digits 0–1), which uses the number 0 followed by b or B as a
         prefix—for example, 0b10</li>
     </ul>
+
     <h4>Java Identifiers</h4>
     <ul>
-      <li>The name must begin with a letter or the symbol $ or _ </li>
+      <li>The name must begin with a letter or the symbol $ or _. </li>
       <li>Subsequent characters may also be numbers.</li>
-      <li>You cannot use the same name as a Java reserved word.</li>
+      <li>Java reserved words can not be used as identifier.</li>
     </ul>
+
     <h4>Java Strings, StringBuilders, and StringBuffer</h4>
-    <p>In Java, there are tow methods to create a String.</p>
+    <p>In Java, there are two methods to create a String.</p>
     <pre>String name = "Java";
 String name = new String("Java"); </pre>
     <p>Once a String object is created, it is not allowed to change. The string
       pool is the place where the JVM collects all these strings.</p>
-    <p>String contatenated using +,</p>
-    <pre>String Name = "Java" + "Script";    
+    <p>String concatenates using +,</p>
+    <pre>String Name = "Java" + "Script";   
+Name = Name + Name; // old one garbage collected, new one re-assigned to Name reference; 
 </pre>
     <p>Important String methods,</p>
     <ul>
-      <li>charAt() - Return the character at a index. Throw exception is out of
+      <li>charAt() - Return the character at a index. Throw exception if out of
         range.</li>
-      <li>contains() - Check if String contains some Stirng.</li>
-      <li>equals(), equalsIgnoreCase() - Check if two Strings equal. Never use
-        == to compare String objects, cuase == check reference equal.</li>
+      <li>contains() - Check if a string contains some string.</li>
+      <li>equals(), equalsIgnoreCase() - Check if two strings equal. Never use
+        == to compare string objects, cause == check reference equal.</li>
       <li>indexOf() - Return the first index that matches the character. Return
         -1 is no match.</li>
-      <li>length() - Return the String length.</li>
-      <li>replace() - Replace part of the String.</li>
-      <li>startsWith(), endsWith() - Check if String start / end with a some
-        String.</li>
-      <li>subString() - Return part of the String.</li>
+      <li>length() - Return the string length.</li>
+      <li>replace() - Replace part of the string.</li>
+      <li>startsWith(), endsWith() - Check if string start / end with some
+        string.</li>
+      <li>subString() - Return part of the string.</li>
       <li>toLowerCase(), toUpperCase() - Return a lover case / upper case
-        version </li>
-      <li>trim() - Remove whitespaces from begining and end of the String.</li>
+        version.</li>
+      <li>trim() - Remove whitespaces from begining and end of the string.</li>
     </ul>
-    <p>It is common to chain multiple methods on the same String.</p>
+    <p>It is common to chain multiple methods on the same string.</p>
     <pre>" Hello, World. ".trim().replace(".", "!").toLowerCase();
 </pre>
+
     <p>String is immutable, so when there is lots of operations, use
       StringBuilder, which is mutable.</p>
     <pre>StringBuilder sb =  new StringBuilder("Java");</pre>
@@ -126,125 +94,56 @@ String name = new String("Java"); </pre>
       currently hold.</p>
     <p>Important StringBuilder methods include charAt(), indexOf(), length(),
       and subString().</p>
-    <p>Since StringBuilder is mutable, it has append(), insert(), delete(),
+    <p>Since StringBuilder is mutable, it has methods such as append(), insert(), delete(),
       deleteCharAt(), reverse(), toString().</p>
     <p>The StringBuilder equals() only compare reference equal, since it is not
-      overwrited.</p>
+      overwritten.</p>
     <p>StringBuffer does the same thing as StringBuilder but more slowly because
       it is thread safe.</p>
+
     <h4>Java References</h4>
     <p>Java reference is a pointer to a object located in memory. Reference
-      types can be assigned null , which means they do not currently refer to an
+      types can be assigned null, which means they do not currently refer to an
       object.</p>
     <pre>String str = "Hello, World!";</pre>
+
     <h4>Java Wrapper Class</h4>
     <table>
       <thead>
-        <tr>
-          <td>Primitive Type</td>
-          <td>Wrapper Class</td>
-          <td>Constructing</td>
-        </tr>
+        <tr><td>Primitive Type</td><td>Wrapper Class</td><td>Constructing</td></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>boolean</td>
-          <td>Boolean</td>
-          <td>new Boolean(true)</td>
-        </tr>
-        <tr>
-          <td>byte</td>
-          <td>Byte</td>
-          <td>new Byte((byte) 1)</td>
-        </tr>
-        <tr>
-          <td>short</td>
-          <td>Short</td>
-          <td>new Short((short) 1)</td>
-        </tr>
-        <tr>
-          <td>int</td>
-          <td>Integer</td>
-          <td>new Integer(1)</td>
-        </tr>
-        <tr>
-          <td>long</td>
-          <td>Long</td>
-          <td>new Long(1L)</td>
-        </tr>
-        <tr>
-          <td> float</td>
-          <td>Float</td>
-          <td>new Float(1.0F)</td>
-        </tr>
-        <tr>
-          <td>double</td>
-          <td>Double</td>
-          <td>new Double(1.0)</td>
-        </tr>
-        <tr>
-          <td>char</td>
-          <td>Character</td>
-          <td>new Character('1')</td>
-        </tr>
+        <tr><td>boolean</td><td>Boolean</td><td>new Boolean(true)</td></tr>
+        <tr><td>byte</td><td>Byte</td><td>new Byte((byte) 1)</td></tr>
+        <tr><td>short</td><td>Short</td><td>new Short((short) 1)</td></tr>
+        <tr><td>int</td><td>Integer</td><td>new Integer(1)</td></tr>
+        <tr><td>long</td><td>Long</td><td>new Long(1L)</td></tr>
+        <tr><td>float</td><td>Float</td><td>new Float(1.0F)</td></tr>
+        <tr><td>double</td><td>Double</td><td>new Double(1.0)</td></tr>
+        <tr><td>char</td><td>Character</td><td>new Character('1')</td></tr>
       </tbody>
     </table>
     <p>You can convert primitive value and wrapper class without cast. Java will
       convert it for you. This is called autoboxing. </p>
     <pre>Integer i = 1;
 int j = i;</pre>
+
     <p>Converting from a String </p>
     <table>
-      <thead>
-        <tr>
-          <td>Wrapper Class</td>
-          <td>Converting String to primitive</td>
-          <td>Constructing</td>
-        </tr>
+      <thead><tr><td>Wrapper Class</td><td>Converting String to primitive</td>          <td>Constructing</td></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Boolean</td>
-          <td>Boolean.parseBoolean("true");</td>
-          <td>Boolean.valueOf("TRUE");</td>
-        </tr>
-        <tr>
-          <td>Byte</td>
-          <td>Byte.parseByte("1");</td>
-          <td>Byte.valueOf("1");</td>
-        </tr>
-        <tr>
-          <td>Short</td>
-          <td>Short.parseShort("1");</td>
-          <td>Short.valueOf("1");</td>
-        </tr>
-        <tr>
-          <td>Integer</td>
-          <td>Integer.parseInt("1");</td>
-          <td>Integer.valueOf("1");</td>
-        </tr>
-        <tr>
-          <td>Long</td>
-          <td>Long.parseLong("1");</td>
-          <td>Long.valueOf("1");</td>
-        </tr>
-        <tr>
-          <td>Float</td>
-          <td>Float.parseFloat("1");</td>
-          <td>Float.valueOf("1.1");</td>
-        </tr>
-        <tr>
-          <td>Double</td>
-          <td>Double.parseDouble("1");</td>
-          <td>Double.valueOf("1.1");</td>
-        </tr>
-        <tr>
-          <td>Character</td>
-          <td>N/A</td>
-          <td>N/A</td>
-        </tr>
+        <tr><td>Boolean</td><td>Boolean.parseBoolean("true");</td><td>Boolean.valueOf("TRUE");</td></tr>
+        <tr><td>Byte</td><td>Byte.parseByte("1");</td><td>Byte.valueOf("1");</td></tr>
+        <tr><td>Short</td><td>Short.parseShort("1");</td><td>Short.valueOf("1");</td></tr>
+        <tr><td>Integer</td><td>Integer.parseInt("1");</td><td>Integer.valueOf("1");</td></tr>
+        <tr><td>Long</td><td>Long.parseLong("1");</td><td>Long.valueOf("1");</td></tr>
+        <tr><td>Float</td><td>Float.parseFloat("1");</td><td>Float.valueOf("1.1");</td></tr>
+        <tr><td>Double</td><td>Double.parseDouble("1");</td><td>Double.valueOf("1.1");</td></tr>
+        <tr><td>Character</td><td>N/A</td><td>N/A</td></tr>
       </tbody>
     </table>
+
     <h3>Java Operators</h3>
     <p>A Java operator applies to a set of variables, values, or literals and
       returns a result. Unless overridden with parentheses, Java operators
@@ -253,61 +152,21 @@ int j = i;</pre>
     <p>Order of operator precedence,</p>
     <table>
       <thead>
-        <tr>
-          <td>Operator</td>
-          <td>Symbols and examples</td>
-        </tr>
+        <tr><td>Operator</td><td>Symbols and examples</td></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Post-unary operators</td>
-          <td> expression++, expression--</td>
-        </tr>
-        <tr>
-          <td>Pre-unary operators</td>
-          <td> ++expression, --expression</td>
-        </tr>
-        <tr>
-          <td>Other unary operators</td>
-          <td> +, -, !</td>
-        </tr>
-        <tr>
-          <td>Multiplication/Division/Modulus</td>
-          <td> *, /, %</td>
-        </tr>
-        <tr>
-          <td>Addition/Subtraction</td>
-          <td> +, -</td>
-        </tr>
-        <tr>
-          <td>Shift operators</td>
-          <td> &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</td>
-        </tr>
-        <tr>
-          <td>Relational operators</td>
-          <td> &lt;, &gt;, &lt;=, &gt;=, instanceof</td>
-        </tr>
-        <tr>
-          <td>Equal to/not equal to</td>
-          <td> ==, !=</td>
-        </tr>
-        <tr>
-          <td>Logical operators</td>
-          <td> &amp;, ^, |</td>
-        </tr>
-        <tr>
-          <td>Short-circuit logical operators</td>
-          <td> &amp;&amp;, ||</td>
-        </tr>
-        <tr>
-          <td>Ternary operators boolean expression</td>
-          <td> ? expression1 : expression2</td>
-        </tr>
-        <tr>
-          <td>Assignment operators</td>
-          <td> =, +=, -=, *=, /= %=, &amp;=, ^=, !=, &lt;&lt;=, &gt;&gt;= ,
-            &gt;&gt;&gt;=</td>
-        </tr>
+        <tr><td>Post-unary operators</td><td> expression++, expression--</td></tr>
+        <tr><td>Pre-unary operators</td><td> ++expression, --expression</td></tr>
+        <tr><td>Other unary operators</td><td> +, -, !</td></tr>
+        <tr><td>Multiplication/Division/Modulus</td><td> *, /, %</td></tr>
+        <tr><td>Addition/Subtraction</td><td> +, -</td></tr>
+        <tr><td>Shift operators</td><td> &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</td></tr>
+        <tr><td>Relational operators</td><td> &lt;, &gt;, &lt;=, &gt;=, instanceof</td></tr>
+        <tr><td>Equal to/not equal to</td><td> ==, !=</td></tr>
+        <tr><td>Logical operators</td><td> &amp;, ^, |</td></tr>
+        <tr><td>Short-circuit logical operators</td><td> &amp;&amp;, ||</td></tr>
+        <tr><td>Ternary operators boolean expression</td><td> ? expression1 : expression2</td></tr>
+        <tr><td>Assignment operators</td><td> =, +=, -=, *=, /= %=, &amp;=, ^=, !=, &lt;&lt;=, &gt;&gt;= , &gt;&gt;&gt;=</td></tr>
       </tbody>
     </table>
     <p>The modulus operation is not limited to positive integer values and may
@@ -319,17 +178,20 @@ int j = i;</pre>
       <li>If one of the values is integral and the other is floating-point, Java
         will automatically promote the integral value to the floating-point
         value’s data type. </li>
-      <li>Smaller data types, namely byte , short , and char , are first
-        promoted to int even if neither of the operands is int . </li>
+      <li>Smaller data types, namely byte, short, and char, are first
+        promoted to int even if neither of the operands is int. </li>
       <li>The result have the same data type as its promoted operands. </li>
     </ul>
     <p>Casting primitives is required any time you are going from a larger
       numerical data type to a smaller numerical data type, or converting from a
-      fl oating-point number to an integral value</p>
+      floating-point number to an integral value</p>
     <pre>int i = (int)1.0</pre>
     <p><code>a instanceof b</code> is True if the reference that a points to is
       an instance of a class, subclass, or class that implements a particular
-      interface, as named in b</p>
+      interface, as named in b.</p>
+    <p>The >> is arithmetic shift right, >>> is logical shift right. In an arithmetic shift, the sign bit is extended to preserve the signedness of the number. </p> 
+
+
     <h3>Java Arrays</h3>
     <p>An Java array is a piece of memory on the heap for a number of elements.</p>
     <h4>Java Creating Arrays</h4>
