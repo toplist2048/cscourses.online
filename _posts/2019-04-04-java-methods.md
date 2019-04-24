@@ -29,19 +29,16 @@ public void count(int... nums) { }
 <ul>
 <li>public - The method can be called from any class.</li>
 <li>protected - The method can only be called from classes in the same package or sub-classes.</li>
-<li>Default (Package Private) - Access The method can only be called from classes in the same 
+<li>Default (Package Private Access) - The method can only be called from classes in the same 
 package. This one is tricky because there is no keyword for default access. You simply omit
 the access modifier.</li>
 <li>private - The method can only be called from within the same class.</li>
 </ul>
 
-<p>the protected rules apply under two scenarios:</p>
+<p>The protected rules apply under two scenarios:</p>
 <ul>
-<li>A member is used without referring to a variable. In
-this case, we are taking advantage of inheritance and protected access is allowed.</li>
-<li> A member is used through a variable. 
-In this case, the rules for the reference type of the variable are what matter. If it is a
-subclass, protected access is allowed.
+<li>A member is used without referring to a variable. In this case, we are taking advantage of inheritance and protected access is allowed.</li>
+<li> A member is used through a variable. In this case, the rules for the reference type of the variable are what matter. If it is a subclass, protected access is allowed.
 </ul>
 
 <pre>
@@ -101,12 +98,10 @@ If that member is public?</td><td>
 
 <h3>Java Static Methods and Fields</h3>
 <p>Each class has a copy of the instance variables. There is only one copy of the code for the
-instance methods. However, each call of an instance method (or any method) gets space on the stack for
-method parameters and local variables.</p>
+instance methods. However, each call of an instance method (or any method) gets space on the stack for method parameters and local variables.</p>
 <p>The same thing happens for static methods. There is one copy of the code. Parameters
 and local variables go on the stack.</p>
-</p>Just remember that only data gets its "own copy." There is no need to duplicate copies of
-the code itself.</p>
+</p>Only data gets its "own copy." There is no need to duplicate copies of the code itself.</p>
 
 <p>static methods have two main purposes:</p>
 <ul>
@@ -117,13 +112,9 @@ instantiate the object just to call the method.</li>
 share the same state. Methods that merely use that state should be static as well.</li>
 </ul>
 
-<p>Accessing a static member is easy. You just put the classname before the method or
+<p>Accessing a static member is easy. You just put the class name before the method or
 variable and you are done.</p>
-<p>A static member cannot call an instance member. This shouldn’t be a surprise since static doesn’t require any instances
-of the class to be around. A static method or instance method can call a static
-method because static methods don’t require an object to use. Only an instance method can
-call another instance method on the same class without using a reference variable, because
-instance methods do require an object. Similar logic applies for the instance and static variables.</p>
+<p>A static member cannot call an instance member. This shouldn’t be a surprise since static doesn’t require any instances of the class to be around. A static method or instance method can call a static method because static methods don’t require an object to use. Only an instance method can call another instance method on the same class without using a reference variable, because instance methods do require an object. Similar logic applies for the instance and static variables.</p>
 
 <b>Static vs. instance calls</b>
 <table>
@@ -141,12 +132,12 @@ instance methods do require an object. Similar logic applies for the instance an
 <b>Java Static Variables</b>
 <p>Some static variables are meant to change as the program runs. 
 Other static variables are meant to never change during the program. This type of variable
-is known as a constant. It uses the final modifi er to ensure the variable never changes.
+is known as a constant. It uses the final modifier to ensure the variable never changes.
 static final constants use a different naming convention than other variables. They use
-all uppercase letters with underscores between "words."</p>
+all uppercase letters with underscores between "words".</p>
 
 <b>Java Static Initialization</b>
-<p>instance initializers that looked like unnamed methods. Just code
+<p>Java instance initializers that looked like unnamed methods. Just code
 inside braces. Static initializers look similar. They add the static keyword to specify they
 should be run when the class is first used.
 The static initializer runs when the class is first used. The statements in it run
@@ -182,9 +173,7 @@ Perl.</p>
 <h3>Java Overloading Methods</h3>
 <p>Method overloading occurs when
 there are different method signatures with the same name but different type parameters. 
-Notice that the access modifier and exception list are irrelevant to overloading. If two methods differ only return type,
-they will not compile. If the only difference is that one is an instance
-method and one is a static method, it will not compile.</p>
+Notice that the access modifier and exception list are irrelevant to overloading. If two methods differ only return type, they will not compile. If the only difference is that one is an instance method and one is a static method, it will not compile.</p>
 
 <b>Order Java uses to choose the right overloaded method</b>
 <table>
