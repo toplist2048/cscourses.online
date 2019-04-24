@@ -39,8 +39,7 @@ super(), is a statement that explicitly calls a parent constructor and may only 
 the first line of a constructor of a child class. The second, super, is a keyword used to reference
 a member defined in a parent class and may be used throughout the child class.</p>
 
-<p>you may want to define a new version of an existing method in a child class that makes use of the
-definition in the parent class. In this case, you can override a method by declaring
+<p>you may want to define a new version of an existing method in a child class that makes use of the definition in the parent class. In this case, you can override a method by declaring
 a new method with the signature and return type as the method in the parent class.</p>
 <p>The compiler performs the following checks when you override a non-private method:</p>
 <ul>
@@ -52,6 +51,15 @@ method in the parent class.</li>
 broader than the class of any exception thrown in the parent class method.</li>
 <li>If the method returns a value, it must be the same or a subclass of the method in the
 parent class, known as covariant return types.</li>
+</ul>
+<p>The @Override annotation is used to express that you intend for this
+method to override one in a superclass or implement one from an interface. It is a great idea to get in the habit of using @Override in order to avoid accidentally overloading a method.</p>
+
+<p>When @Override is used, the method is doing one of three things:</p>
+<ul>
+<li>Implementing a method from an interface</li>
+<li>Overriding a superclass method of a class</li>
+<li>Overriding a method declared in Object, such as hashCode, equals, or toString</li>
 </ul>
 
 <b>Java Overloading vs. Overriding</b>
@@ -278,3 +286,72 @@ exceptions that exist on methods for this object, potentially leading to compile
 with new or broader exceptions. </p>
 <p>For the same reason, Java disallows a method from being overridden by a less accessible version of the method.
 Also, overridden methods must use covariant return types. </p>
+
+
+<h3>Java Coding equals, hashCode, and toString</h3>
+<p>All classes in Java inherit from java.lang.Object, so three of methods in Object are common to override, toString(), equals(), and hashCode(). 
+<b>Java toString()</b>
+<p>Java automatically calls the toString() method if you try to print out an object.</p>
+<pre>
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
+public class ToStringBuilderTest {
+  private int testNum = 123;
+  private String testString = "hamburger";
+  public static void main(String[] args) {
+    Test test = new Test();
+    String result = ToStringBuilder.reflectionToString(test, ToStringStyle.MULTI_LINE_STYLE);
+    System.out.println(result);
+  }
+}
+</pre>
+
+<b>Java equals()</b>
+<p>Java uses == to compare primitives and for checking if two variables refer
+to the same object. String does have an equals() method. It checks that the values are the same. StringBuilder uses the implementation of equals() provided by Object, which simply
+checks if the two objects being referred to are the same.</p>
+<pre>
+class Complex {   
+    private double re, im; 
+    public Complex(double re, double im) { 
+        this.re = re; 
+        this.im = im; 
+    } 
+    // Overriding equals() to compare two Complex objects 
+    @Override
+    public boolean equals(Object o) { 
+        if (o == this) { return true; } 
+        if (!(o instanceof Complex)) { return false; }           
+        Complex c = (Complex) o; 
+        return Double.compare(re, c.re) == 0
+                && Double.compare(im, c.im) == 0; 
+    } 
+} 
+</pre>
+<p>The equals() method implements an equivalence relation on non‐null object references:</p>
+<ul>
+<li>It is reflexive: For any non‐null reference value x, x.equals(x) should return true.</li>
+<li>It is symmetric: For any non‐null reference values x and y, x.equals(y) should return
+true if and only if y.equals(x) returns true.<li>
+<li>It is transitive: For any non‐null reference values x, y, and z, if x.equals(y) returns
+true and y.equals(z) returns true, then x.equals(z) should return true.</li>
+<li>It is consistent: For any non‐null reference values x and y, multiple invocations of
+x.equals(y) consistently return true or consistently return false, provided no
+information used in equals comparisons on the objects is modified.</li>
+<li>For any non‐null reference value x, x.equals(null) should return false.</li>
+</ul>
+
+<b>Java hashCode()</b>
+<p>The hash code is used when storing the object as a key in a map.</p>
+<p>The hash code contract:</p>
+<ul>
+<li>Within the same program, the result of hashCode() must not change. </li>
+<li>If equals() returns true when called with two objects, calling hashCode() on each of
+those objects must return the same result. </li>
+<li>If equals() returns false when called with two objects, calling hashCode() on each of
+those objects does not have to return a different result. This means hashCode() results
+do not need to be unique when called on unequal objects.</li>
+</ul>
+
+<h3>Java Enums</h3>
