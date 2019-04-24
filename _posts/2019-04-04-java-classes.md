@@ -333,7 +333,7 @@ class Complex {
 <ul>
 <li>It is reflexive: For any non‐null reference value x, x.equals(x) should return true.</li>
 <li>It is symmetric: For any non‐null reference values x and y, x.equals(y) should return
-true if and only if y.equals(x) returns true.<li>
+true if and only if y.equals(x) returns true.</li>
 <li>It is transitive: For any non‐null reference values x, y, and z, if x.equals(y) returns
 true and y.equals(z) returns true, then x.equals(z) should return true.</li>
 <li>It is consistent: For any non‐null reference values x and y, multiple invocations of
