@@ -229,6 +229,40 @@ compile if marked as private or protected.</li>
 <li>To reference the static method, a reference to the name of the interface must be used.</li>
 </ul>
 
+
+<b>Java Functional Interface</b>
+<p>Functional interface is an interface that contains a single abstract method. Functional interfaces are used as the basis for lambda expressions in functional programming. A lambda expression is a block of code that gets passed around, like an anonymous method.</p>
+<p>It is a good practice to mark a functional interface with the @FunctionalInterface
+annotation for clarity, but it is not required. If a class marked with the @FunctionalInterface
+annotation contains more than one abstract method, or no abstract methods at all, then
+the compiler will detect this error and not compile.</p>
+<pre>
+class C {
+  public boolean f() { return true; }
+}
+interface I {
+  public boolean f(C c);
+}
+public class T {
+  static void f(C c, I i) {
+    if(i.f(c)) {
+      System.out.println("True");
+    }
+  }
+  public static void main(String[] args) {
+    f(new C(), c -> c.f());
+  }
+}
+</pre>
+
+<b>Java Predicate Interfaces</b>
+<p>Java provides a predicate interface in the package java.util.function,</p>
+<pre>
+public interface Predicate<T> {
+  public boolean test(T t);
+}
+</pre>
+
 <h3>Java Polymophism</h3>
 <p>Java supports polymorphism, the property of an object to take on many different forms.</p>
 
