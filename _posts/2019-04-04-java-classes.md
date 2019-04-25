@@ -495,3 +495,17 @@ public class O{
   }
 }
 </pre>
+
+<b>Java Static Nested Classes</b>
+<p>A static nested class is a static class defined at the member level. It can be instantiated without an object of the enclosing class, so it can’t access the instance variables without an explicit object of the enclosing class.</p>
+<pre>
+public class O {
+  static class I {
+    private int val = 1;
+  }
+  public static void main(String[] args) {
+    I i = new I();
+    System.out.println(i.val);
+  } 
+}
+</pre>
