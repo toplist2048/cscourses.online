@@ -28,6 +28,26 @@ post_date: 2019-04-25 15:18:45
 </tbody>
 </table>
 
+<b>Collection attributes</b> 
+<table>
+<thead>
+<tr><td>Type</td><td> Java Collections Framework interface</td><td> Sorted?</td><td> Calls hashCode ? </td><td>Calls compareTo ?</td></tr>
+</thead>
+<tbody>
+<tr><td>ArrayList</td><td> List</td><td> No</td><td> No</td><td> No</td></tr>
+<tr><td>ArrayDequev Queue</td><td> No</td><td> No</td><td> No</td></tr>
+<tr><td>HashMap</td><td> Map</td><td> No</td><td> Yes</td><td> No</td></tr>
+<tr><td>HashSet</td><td> Set</td><td> No</td><td> Yes</td><td> No</td></tr>
+<tr><td>Hashtable</td><td> Map</td><td> No</td><td> Yes</td><td> No</td></tr>
+<tr><td>LinkedList</td><td> List , Queue</td><td> No</td><td> No</td><td> No</td></tr>
+<tr><td>Stack</td><td> List</td><td> No</td><td> No</td><td> No</td></tr>
+<tr><td>TreeMap</td><td> Map</td><td> Yes</td><td> No</td><td> Yes</td></tr>
+<tr><td>TreeSet</td><td> Set</td><td> Yes</td><td> No</td><td> Yes</td></tr>
+<tr><td>Vector</td><td> List</td><td> No</td><td> No</td><td> No</td></tr>
+</tbody>
+</table>
+
+
 <h4>Java Lists</h4>
 <b>Java List Methods</b>
 <ul>
