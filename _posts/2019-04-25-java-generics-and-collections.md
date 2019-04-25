@@ -36,7 +36,7 @@ post_date: 2019-04-25 15:18:45
 <li>E get(int index) - Returns element at index</li>
 <li>int indexOf(Object o) - Returns first matching index or -1 if not found</li>
 <li>int lastIndexOf(Object o) - Returns last matching index or -1 if not found</li>
-<li>void remove(int index) - Removes element at index and moves the rest toward the front<li>
+<li>void remove(int index) - Removes element at index and moves the rest toward the front</li>
 <li>E set(int index, E e) - Replaces element at index and returns original</li>
 </ul>
 
