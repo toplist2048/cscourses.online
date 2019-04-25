@@ -355,3 +355,143 @@ do not need to be unique when called on unequal objects.</li>
 </ul>
 
 <h3>Java Enums</h3>
+<p>An enum is a type of class that mainly contains static members. To create an enum, use the enum keyword instead of the class keyword. Then list all of the valid types for that enum.</p>
+<pre>
+public enum Season {
+  WINTER, SPRING, SUMMER, FALL
+}
+Season s = Season.WINTER;
+for(Season season: Season.values()) {
+  System.out.println(season.name() + " " + season.ordinal());
+}
+</pre>
+<p>You can’t compare an int and enum value directly.</p>
+<p>You can’t extend an enum.</p>
+
+<h3>Java Nested Classes</h3>
+<p>A nested class is a class that is defined within another class. A nested class that is not
+static is called an inner class. There are four of types of nested classes:</p>
+<ul>
+<li>A member inner class is a class defined at the same level as instance variables. It is not
+static. Often, this is just referred to as an inner class without explicitly saying the type.</li>
+<li>A local inner class is defined within a method.</li>
+<li>An anonymous inner class is a special case of a local inner class that does not have a
+name.</li>
+<li>A static nested class is a static class that is defined at the same level as static
+variables.</li>
+</ul>
+
+<b>Java Member Inner Classes</b>
+<p>Member inner classes have the following properties:</p>
+<ul>
+<li>Can be declared public, private, or protected or use default access</li>
+<li>Can extend any class and implement interfaces</li>
+<li>Can be abstract or final</li>
+<li>Cannot declare static fields or methods</li>
+<li>Can access members of the outer class including private members</li>
+</ul>
+<pre>
+public class Outer {
+  private String hi= "Hi";
+  protected class Inner {
+    public void say() {
+      System.out.println(hi);
+    }
+  }
+  public static void main(String[] args) {
+    Inner inner= new Outer().new Inner();
+    inner.say();
+  }
+}
+</pre>
+<p>Compiling the Outer.java class creates two class files: Outer.class and Outer$Inner.class. </p>
+<p>Inner classes can have the same variable names as outer classes. There is a special way of
+calling this to say which class you want to access.</p>
+<pre>
+public class A {
+  private int x = 1;
+  class B {
+    private int x = 2;
+    class C {
+      private int x = 3;
+      public void allTheX() {
+        System.out.println(x);         //3
+        System.out.println(this.x);    //3
+        System.out.println(B.this.x);  //2
+        System.out.println(A.this.x);  //1
+      }
+    }
+  }
+  public static void main(String[] args) {
+    A.B.C c = new A().new B().new C();
+    c.allTheX();
+  }
+}
+</pre>
+
+<b>Java Private Interfaces</b>
+<p>All methods in an interface are public. A class that implements the interface must define that method as public. The interface itself does not have to be public. An inner
+interface can be private. This means that the interface can only be referred to within the
+current outer class.</p>
+<pre>
+public class C {
+  private interface I {
+    public void f();
+  }
+  class B implements I {
+    public void f() { }
+  } 
+}
+</pre>
+
+<b>Java Local Inner Classes</b>
+<p>A local inner class is a nested class defined within a method. A local
+inner class declaration does not exist until the method is invoked, and it goes out of scope
+when the method returns. This means that you can create instances only from within the
+method.</p>
+<p>Local inner classes have the following properties:</p>
+<ul>
+<li>They do not have an access specifier.</li>
+<li>They cannot be declared static and cannot declare static fields or methods.</li>
+<li>They have access to all fields and methods of the enclosing class.</li>
+<li>They do not have access to local variables of a method unless those variables are final
+or effectively final. More on this shortly.</li>
+</ul>
+<pre>
+class Outer {
+  public void f() {
+    class Inner {
+      void fin() {
+        System.out.println("fin");
+      }
+    }
+    Inner i = new Inner();
+    i.fin();
+  }
+  public static void main(String args[]) {
+    Outer o = new Outer();
+    o.f();
+  }
+}
+</pre>
+
+<b>Java Anonymous Inner Classes</b>
+<p>An anonymous inner class is a local inner class that does not have a name. It is declared
+and instantiated all in one statement using the new keyword. Anonymous inner classes are
+required to extend an existing class or implement an existing interface.</p>
+<pre>
+public class O{
+  abstract class I{
+    abstract void f();
+  }
+  public void fo() {
+    I i= new I() {
+      void f() { }
+    };
+  }
+  public static void main(String args[]) {
+    O o = new O();
+    o.fo();
+  }
+}
+</pre>
