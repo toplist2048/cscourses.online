@@ -5,7 +5,7 @@ author: admin
 post_excerpt: ""
 layout: post
 permalink: >
-  https://cscourses.online/cpp/cpp-library/
+  https://cscourses.online/cpp/cpp-generic-and-containers/
 published: true
 post_date: 2019-04-26 13:25:19
 ---
