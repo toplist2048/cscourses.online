@@ -9,30 +9,70 @@ permalink: >
 published: true
 post_date: 2019-04-26 13:25:19
 ---
-<h2>C++ Library</h2>
-<h3>C++ IO Library</h3>
-<p>In iostream, we have,</p>
-<ul>
-<li>istream (input stream) type, which provides input operations</li>
-<li>ostream (output stream) type, which provides output operations</li>
-<li>cin, an istream object that reads the standard input</li>
-<li>cout, an ostream object that writes to the standard output</li>
-<li>cerr, an ostream object, typically used for program error messages, that writes to the standard error</li>
-<li>The >> operator, which is used to read input from an istream object</li>
-<li>The &lt;&lt; operator, which is used to write output to an ostream object</li>
-<li>The getline function, which reads a line of input from a givenistream into a given string</li>
-</ul>
-<p>C++ also defined fstream for file and sstream for string buffer.</p>
+<h2>C++ Generic and Containers</h2>
+<p>Generic programming writes code independent of type. </p>
 
-<p>Objects of the IO types cannot be copied or assigned. Because the IO types can not be copied, functions that do IO typically pass and return the stream through references. Reading or writing an IO object changes its state, so the reference must not be const.</p>
+<h3>C++ Templates</h3>
+<p>Templates are the base of generic programming.</p>
+
+<h4>C++ Template Definitions</h4>
+<b>C++ Function Templates</b>
+<p>A function template is a type-independent function that is used to generate a type-specific version at compile time. 
+A template definition starts with the keyword template followed by a template parameter list. The template parameter list cannot be empty.</p>
 <pre>
-ofstream o1, o2;
-o1 = o2;              // error: cannot assign stream objects
-void print(ofstream); // error: can't initialize the ofstream parameter
-o2 = print(o1);       // error: cannot copy stream objects
-void print(std::ostream& c, string s) { c<<s; }
-print(std::cout, "1");
+template &lt;typename T>
+int compare(const T &a, const T &b) {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+};
+compare(1, 2);
+compare(1.1, 2.2);
 </pre>
+<p>A function template can be declared inline. The specifier is placed following the template parameter list.</p>
+
+<b>C++ Class Templates</b>
+<p>Except the template parameter list, the definition of a class template looks like
+any other class. In the class, we can use the template parameters as types.</p>
+<pre>
+template <typename T>
+class Value {
+  T val;
+public:  
+  int compare(const T &a) {
+    if (val < a) return -1;
+    if (val > a) return 1;
+    return 0;
+  }
+};
+Value&lt;int> v;
+v.compare(1);
+</pre>
+
+<b>C++ Template Parameters</b>
+<p>Template parameter can be a type parameter or a nontype parameter. If it is a type parameter, then we know
+that the parameter represents a type. If it is a nontype parameter, we know it is a value.<p>
+<pre>
+template<typename T, int size>
+</pre>
+<p>The name of a template parameter can be used after it has been declared and until the end of the template definition.</p>
+<p>A name used as a template parameter may not be reused within the template. The name of a template parameter can be used only once within
+the same template parameter list.</p>
+<p>We can declare a template without defining it.</p>
+<pre>
+template <class T> int compare(const T&, const T&) ;
+</pre>
+<p>Each template type parameter must be preceded either by the keyword class or typename ;
+each nontype parameter must be preceded by a type name. The keyword typename was added to C++ as part of Standard C++, so
+older programs are more likely to use the keyword class exclusively</p>
+<p>We can tell the compiler to treat a member as a type by prefixing uses of the member name with the keyword typename .</p>
+<pre>
+tempalte <class T> 
+void fun(T & t) {
+  typename t::size_type *p;
+}
+</pre>
+
 
 
 
