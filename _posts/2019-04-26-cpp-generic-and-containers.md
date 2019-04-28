@@ -17,8 +17,7 @@ post_date: 2019-04-26 13:25:19
 
 <h4>C++ Template Definitions</h4>
 <b>C++ Function Templates</b>
-<p>A function template is a type-independent function that is used to generate a type-specific version at compile time. 
-A template definition starts with the keyword template followed by a template parameter list. The template parameter list cannot be empty.</p>
+<p>A function template is a type-independent function that is used to generate a type-specific version at compile time. A template definition starts with the keyword template followed by a template parameter list. The template parameter list cannot be empty.</p>
 <pre>
 template &lt;typename T>
 int compare(const T &a, const T &b) {
@@ -32,8 +31,7 @@ compare(1.1, 2.2);
 <p>A function template can be declared inline. The specifier is placed following the template parameter list.</p>
 
 <b>C++ Class Templates</b>
-<p>Except the template parameter list, the definition of a class template looks like
-any other class. In the class, we can use the template parameters as types.</p>
+<p>In class template, we can use the template parameters as types.</p>
 <pre>
 template <typename T>
 class Value {
@@ -50,21 +48,18 @@ v.compare(1);
 </pre>
 
 <b>C++ Template Parameters</b>
-<p>Template parameter can be a type parameter or a nontype parameter. If it is a type parameter, then we know
-that the parameter represents a type. If it is a nontype parameter, we know it is a value.<p>
+<p>Template parameter can be a type parameter or a non-type parameter.<p>
 <pre>
 template<typename T, int size>
 </pre>
-<p>The name of a template parameter can be used after it has been declared and until the end of the template definition.</p>
-<p>A name used as a template parameter may not be reused within the template. The name of a template parameter can be used only once within
-the same template parameter list.</p>
+<p>For scope, the name of a template parameter can be used after it has been declared and until the end of the template declaration or definition.</p>
+<p>A name used as a template parameter may not be reused within the template. The name of a template parameter can be used only once within the same template parameter list.</p>
 <p>We can declare a template without defining it.</p>
 <pre>
 template <class T> int compare(const T&, const T&) ;
 </pre>
-<p>Each template type parameter must be preceded either by the keyword class or typename ;
-each nontype parameter must be preceded by a type name. The keyword typename was added to C++ as part of Standard C++, so
-older programs are more likely to use the keyword class exclusively</p>
+<p>Each template type parameter must be preceded either by the keyword class or typename;
+each non-type parameter must be preceded by a type name. The keyword typename was added to C++ as part of Standard C++, so older programs are more likely to use the keyword class.</p>
 <p>We can tell the compiler to treat a member as a type by prefixing uses of the member name with the keyword typename .</p>
 <pre>
 tempalte <class T> 
@@ -74,29 +69,14 @@ void fun(T & t) {
 </pre>
 
 <h4>C++ Template Instantiation</h4>
-<p>The process of determining the types and values of the template arguments from the type of the function arguments is called template argument deduction .</p>
-<p>A template type parameter may be used as the type of more than one function parameter. In
-such cases, template type deduction must generate the same template argument type for each
-corresponding function argument.</p>
-<p>In general, arguments are not converted to match an existing instantiation; instead, a new
-instance is generated. There are only two kinds of conversions that the compiler will perform
-rather than generating a new instantiation:</p>
-<ul>
-<li>const conversions: A function that takes a reference or pointer to a const can be called
-with a reference or pointer to nonconst object, respectively, without generating a new
-instantiation. If the function takes a nonreference type, then const is ignored on either the
-parameter type or the argument. That is, the same instantiation will be used whether we
-pass a const or nonconst object to a function defined to take a nonreference type. </li>
-<li>array or function to pointer conversions: If the template parameter is not a reference type,
-then the normal pointer conversion will be applied to arguments of array or function type.
-An array argument will be treated as a pointer to its first element, and a function argument
-will be treated as a pointer to the function's type.</li>
-</ul>
+<p>The process of determining the types and values of the template arguments from the type of the function arguments is called template argument deduction. Each instantiation of a class template constitutes an independent
+class type.</p>
+<p>A template type parameter may be used more than one function parameter. In
+such cases, it must generate the same template argument type for each function argument.</p>
 
 <h4>C++ Template Compilation</h4>
 <p>When the compiler sees a template definition, it does not generate code immediately. The compiler
-produces type-specific instances of the template only when it sees a use of the template, such as
-when a function template is called or an object of a class template is defined.</p>
+produces type-specific instances only when it sees a use of the template.</p>
 
 <h3>C++ Sequential Containers</h3>
 <b>Sequential Containers</b>
