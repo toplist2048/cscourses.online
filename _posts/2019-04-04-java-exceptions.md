@@ -49,7 +49,8 @@ try { // The curly braces are required even if there is only one statement insid
 } catch ( exception_type identifier ) { // The identifier refers to the caught exception object.
   //exception handler
 } finally {
-  //finally block //The finally block always executes, whether or not an exception occurs in the try block.
+  //finally block 
+  //The finally block always executes, whether or not an exception occurs in the try block.
 }
 </pre>
 <p>If an exception is thrown in a try statement, the catch clauses attempt to catch it.</p>
