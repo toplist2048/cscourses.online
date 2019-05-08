@@ -13,12 +13,12 @@ post_date: 2019-04-04 17:14:17
 
 <h3>Java Class Inheritance</h3>
 <p>Java supports single inheritance, by which a class may inherit from only one direct parent class. 
-To truly understand single inheritance, it may helpful to contrast it with multiple inheritance,
-by which a class may have multiple direct parents.</p>
+It helpful to contrast it with multiple inheritance, by which a class may have multiple direct parents.</p>
 <p>Java also supports multiple levels of inheritance, by which one class may extend
 another class, which in turn extends another class.</p>
-<p>In Java, all classes inherit from a single class, java.lang.Object. Furthermore, java.lang.Object is the only class that doesn’t have any
-parent classes. The compiler automatically inserts code into any class you write that doesn’t extend a specific class.</p>
+<p>In Java, all classes inherit from a single class, java.lang.Object, java.lang.Object is the only class that doesn’t have any parent classes. 
+The compiler automatically inserts code into any class you write that doesn’t extend a specific class.</p>
+<pre>public class Dog extends Animal { }</pre>
 
 <b>Constructor Definition Rules:</b>
 <ul>
@@ -75,8 +75,8 @@ and independent method, unrelated to the parent version’s method, so none of t
 overriding methods are invoked.</p>
 
 <b>Java Hiding Static Methods</b>
-<p>A hidden method occurs when a child class defi nes a static method with the same name
-and signature as a static method defi ned in a parent class.</p>
+<p>A hidden method occurs when a child class defines a static method with the same name
+and signature as a static method defined in a parent class.</p>
 <b>The five rules for hiding a method</b>
 <ul>
 <li>The method in the child class must have the same signature as the method in the parent
