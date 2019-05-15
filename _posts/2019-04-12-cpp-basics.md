@@ -197,4 +197,6 @@ type but does not evaluate the expression.</p>
 <pre>
 int a = 1;
 int b = 2;
-decltype(a+b) c = 3; // c has whatever type a+b has</pre>
+decltype(a+b) c = 3; // c has whatever type a+b has
+auto x = foo();                           // more concise than 'decltype(foo()) x'
+std::vector<decltype(foo())> v{ foo() };  // cannot use 'auto'</pre>
