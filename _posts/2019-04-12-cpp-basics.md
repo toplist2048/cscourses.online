@@ -194,4 +194,7 @@ using aName = int;
 <pre>auto b = 1;</pre>
 <p>The decltype returns the type of its operand. The compiler analyzes the expression to determine its
 type but does not evaluate the expression.</p>
-<pre>decltype(f()) ret = x; // ret has whatever type f returns</pre>
+<pre>
+int a = 1;
+int b = 2;
+decltype(a+b) c = 3; // c has whatever type a+b has</pre>
