@@ -200,3 +200,77 @@ int b = 2;
 decltype(a+b) c = 3; // c has whatever type a+b has
 auto x = foo();                           // more concise than 'decltype(foo()) x'
 std::vector<decltype(foo())> v{ foo() };  // cannot use 'auto'</pre>
+
+<h3>C++ Strings, Vectors, and Arrays</h3>
+<p>A using declaration lets us use a name from a namespace without qualifying the
+name with a namespace_name:: prefix. A using declaration has the form using namespace::name;</p>
+<pre>using std:cin;</pre>
+
+<h4>C++ Strings</h4>
+<p>A string is a variable-length sequence of characters.</p>
+<b>Ways to Initialize a C++ string</b>
+<ul>
+<li>string s1; - Default constructor; s1 is the empty string</li>
+<li>string s2(s1); - Initialize s2 as a copy of s1</li>
+<li>string s3("value"); - Initialize s3 as a copy of the string literal</li>
+<li>string s4(n, 'c'); - Initialize s4 with n copies of the character 'c'</li>
+</ul>
+<p>Note for compatibility with C, character string literalsare not the same type as the standard library string type. </p>
+<b>C++ string Operations</b>
+<ul>
+<li>cout << s; - Write string s into output stream cout, return cout</li>
+<li>cin >> s; - Read whitespace-separated string from imput stream cin into s, return cin</li>
+<li>getline(cin, s) - Read a line from input cin into s, return cin</li> 
+<li>s.empty() - Returns true if s is empty; otherwise returns falses.</li>
+<li>size() - Returns number of characters in s, returns type is string::size_type</li>
+<li>s[n] - Returns the character at position n in s; positions start at 0.</li>
+<li>s1 + s2 - Returns a string equal to the concatenation of s1 and s2</li>
+<li>s1 = s2 - Replaces characters in s1 by a copy of s2</li>
+<li>v1 == v2 - Returns true if v1 and v2 are equal; false otherwise</li>
+<li>!=, <, <= ,>, and >= - Have their normal meanings</li>
+</ul>
+
+<b>C++ string Character Operations</b>
+<p>Below are functions to process the individual characters of a string.</p>
+<ul>
+<li>isalnum(c) - true if c is a letter or a digit.</li>
+<li>isalpha(c) - true if c is a letter.</li>
+<li>iscntrl(c) - true if c is a control character.</li>
+<li>isdigit(c) - true if c is a digit.</li>
+<li>isgraph(c) - true if c is not a space but is printable.</li>
+<li>islower(c) - true if c is a lowercase letter.</li>
+<li>isprint(c) - true if c is a printable character.</li>
+<li>ispunct(c) - true if c is a punctuation character.</li>
+<li>isspace(c) - true if c is whitespace.</li>
+<li>isupper(c) - true if c is an uppercase letter.</li>
+<li>isxdigit(c) - true if c is a hexadecimal digit.</li>
+<li>tolower(c) - If c is an uppercase letter, returns its lowercase equivalent; otherwise returns c unchanged.</li>
+<li>toupper(c) - If c is a lowercase letter, returns its uppercase equivalent; otherwise returns c unchanged.</li>
+</ul>
+
+<h4>C++ Vectors</h4>
+<p>A vector is a collection of objects, all of which have the same type. A vectoris a class template. </p>
+<pre>
+#include <vector>
+using std::vector;</pre>
+<b>Defining and Initializing C++ vectors</b>
+<ul>
+<li>vector<T> v1; - vector that holds objects of type T; Default constructor v1 is empty</li>
+<li>vector<T> v2(v1); - v2 is a copy of v1</li>
+<li>vector<T> v3(n, i); - v3 has n elements with value i</li>
+<li>vector<T> v4(n); - v4 has n copies of a value-initialized object</li>
+<li>vector<T> v5 {a, b, c}; - v5 has a value initializer list</li>
+<li>vector<T> v6 = {a, b, c}; - v6 has a value initializer list</li>
+</ul>
+<p>Vectors grow dynamically at runtime.</p>
+
+<b>C++ vectors Operations</b>
+<ul>
+<li>v.empty() - Returns true if v is empty; otherwise returns false</li>
+<li>v.size() - Returns number of elements in v</li>
+<li>v.push_back(t) - Adds element with value t to end of v</li>
+<li>v[n] - Returns element at position n in v</li>
+<li>v1 = v2 - Replaces elements in v1 by a copy of elements in v2</li>
+<li>v1 == v2 - Returns TRue if v1 and v2 are equal</li>
+<li>!=, <, <= ,>, and >= - Have their normal meanings</li>
+</ul>
