@@ -274,3 +274,16 @@ using std::vector;</pre>
 <li>v1 == v2 - Returns TRue if v1 and v2 are equal</li>
 <li>!=, <, <= ,>, and >= - Have their normal meanings</li>
 </ul>
+
+<h4>C++ Iterators</h4>
+<p>The iterator returned by begin denotes the first element. The iterator returned by end is an iterator positioned “one past the end”. This iterator denotes a non existent element “off the end” of the container. If the container is empty, begin returns the same iterator as the one returned by end.</p>
+<pre>
+auto b = v.begin(), e = v.end();
+</pre>
+<b>C++ Iterator Operations</b>
+<ul>
+<li>*iter - Return a reference to the element denoted by the iterator iter.</li>
+<li>iter->member， (*iter).memter - Return the element memeber</li>
+<li>++iter, --iter - Iterator arithmetic</li>
+<li>iter1 == iter2, iter1 != iter2 -  Iterator comparation</li>
+</ul>
