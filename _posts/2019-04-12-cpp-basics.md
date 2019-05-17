@@ -201,7 +201,7 @@ decltype(a+b) c = 3; // c has whatever type a+b has
 auto x = foo();                           // more concise than 'decltype(foo()) x'
 std::vector<decltype(foo())> v{ foo() };  // cannot use 'auto'</pre>
 
-<h3>C++ Strings, Vectors, and Arrays</h3>
+<h3>C++ Strings, Vectors, and Iterators</h3>
 <p>A using declaration lets us use a name from a namespace without qualifying the
 name with a namespace_name:: prefix. A using declaration has the form using namespace::name;</p>
 <pre>using std:cin;</pre>
